@@ -1,0 +1,13 @@
+#Sat Feb 03 16:04:48 CST 2018
+tomcat7Server.ymjfxgl.deployIsOverProject=false
+tomcat7Server.ymjfxgl.type=WebDeployment
+tomcat7Server.ymjfxgl.shouldBackup=false
+tomcat7Server.ymjfxgl.isExploded=true
+tomcat7Server.ymjfxgl.shouldOverwrite=false
+tomcat7Server.ymjfxgl.isUptoDate=true
+eclipse.preferences.version=1
+tomcat7Server.ymjfxgl.altContextRoot=
+tomcat7Server.ymjfxgl.IEARProjectName=
+tomcat7Server.ymjfxgl.deploymentPath=D\:\\tomcat 7.0\\webapps\\ymjfxgl
+tomcat7Server.ymjfxgl.contextRoot=/ymjfxgl
+tomcat7Server.ymjfxgl.isDeployed=true

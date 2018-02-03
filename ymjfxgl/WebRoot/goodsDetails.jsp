@@ -12,12 +12,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <title>商品详情</title>
-  <link href="shangpinxiangqing/css/list.css" rel="stylesheet" type="text/css">
-  <link href="shangpinxiangqing/css/cart.css" rel="stylesheet" type="text/css">
-  <link href="shangpinxiangqing/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="shangpinxiangqing/css/pipei.css" rel="stylesheet" type="text/css">
-  <script src="shangpinxiangqing/js/jquery-1.7.1.min.js"></script>
-  <script src="shangpinxiangqing/js/jquery.unobtrusive-ajax.min.js"></script>
+  <link href="style/css/list.css" rel="stylesheet" type="text/css">
+  <link href="style/css/cart.css" rel="stylesheet" type="text/css">
+  <link href="style/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="style/css/pipei.css" rel="stylesheet" type="text/css">
+  <script src="style/js/jquery-1.7.1.min.js"></script>
+  <script src="style/js/jquery.unobtrusive-ajax.min.js"></script>
   <script>
   
     //提交后返回结果
@@ -121,7 +121,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <!--内容-->
   <div class="data_box "> 
     <div class="goods_details_box">
-      <div class="img_box"><img src="shangpinxiangqing/images/04cb3efd-a99c-408d-8ef0-e7b71b1808d5.jpg"></div>
+      <div class="img_box"><img src="style/images/04cb3efd-a99c-408d-8ef0-e7b71b1808d5.jpg"></div>
       <div class="introduce">
         <ul>
          

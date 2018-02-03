@@ -12,14 +12,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <title>分销管理系统升级版</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- begin 整体样式-->
-    <link href="fenxiao/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="fenxiao/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
+    <link href="style/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="style/css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
     <!--响应式导航-->
-    <link href="fenxiao/css/style-responsive.css" rel="stylesheet" type="text/css">
+    <link href="style/css/style-responsive.css" rel="stylesheet" type="text/css">
     <!--响应式导航-->
-    <link href="fenxiao/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="fenxiao/css/public.css" rel="stylesheet">
-    <link href="fenxiao/css/nav.css" rel="stylesheet" type="text/css">
+    <link href="style/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="style/css/public.css" rel="stylesheet">
+    <link href="style/css/nav.css" rel="stylesheet" type="text/css">
     <!-- end 整体样式 -->
     <script type="text/javascript">
 	    function ClosePage() {
@@ -54,12 +54,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        <div class="container-fluid">
           <!-- begin LOGO -->
           <a class="brand" href="" target="iframemain">
-             <img src="fenxiao/images/logo.png" alt="logo">
+             <img src="style/images/logo.png" alt="logo">
           </a>
           <!-- end LOGO -->
           <!-- begin 响应菜单显示开关-->
           <a href="javascript:;" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-              <img src="fenxiao/images/menu-toggler.png" alt="">
+              <img src="style/images/menu-toggler.png" alt="">
           </a>
           <!-- end 响应菜单显示开关 -->
           <!-- begin 顶部导航菜单 -->
@@ -109,38 +109,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class=""><a href="javascript:;"><i class="icon-shopping-cart"></i><span class="title">订购商城 <span class="label-en">shopping</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
                  <li><a href="conditioncommodityPageQuery?start=1&pageSize=9" target="iframemain">商品列表 <span class="label-en"></span></a></li>
-                 <li><a href="" target="iframemain">我的订单 <span class="label-en"></span></a></li>
+                 <li><a href="myOrder.jsp" target="iframemain">我的订单 <span class="label-en"></span></a></li>
                </ul>
             </li>
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">业务管理 <span class="label-en">business</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-                  <li><a href="" target="iframemain">注册订单 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">复投与分红列表 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">申请报单中心 <span class="label-en"></span></a></li>
+                  <li><a href="registeredOrder.jsp" target="iframemain">注册订单 <span class="label-en"></span></a></li>
+                  <li><a href="reinvestmentAndBonusList.jsp" target="iframemain">复投与分红列表 <span class="label-en"></span></a></li>
+                  <li><a href="applicationReportingCenter.jsp" target="iframemain">申请报单中心 <span class="label-en"></span></a></li>
 			   </ul>
             </li>
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">激活管理 <span class="label-en">activation</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-                  <li><a href="" target="iframemain">已激活订单 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">未激活订单 <span class="label-en"></span></a></li>
+                  <li><a href="activeOrder.jsp" target="iframemain">已激活订单 <span class="label-en"></span></a></li>
+                  <li><a href="unactivatedOrder.jsp" target="iframemain">未激活订单 <span class="label-en"></span></a></li>
 	           </ul>
             </li>
             <li class=""><a href="javascript:;"><i class="icon-tags"></i><span class="title">财务管理 <span class="label-en">Finance</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-                  <li><a href="" target="iframemain">奖金明细 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">财务统计 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">账户提现 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">账户转账 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">账户转换 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">账户充值 <span class="label-en"></span></a></li>
+                  <li><a href="bonusDetails.jsp" target="iframemain">奖金明细 <span class="label-en"></span></a></li>
+                  <li><a href="financeStatistics.jsp" target="iframemain">财务统计 <span class="label-en"></span></a></li>
+                  <li><a href="accountWithdrawal.jsp" target="iframemain">账户提现 <span class="label-en"></span></a></li>
+                  <li><a href="accountTransfer.jsp" target="iframemain">账户转账 <span class="label-en"></span></a></li>
+                  <li><a href="accountConversion.jsp" target="iframemain">账户转换 <span class="label-en"></span></a></li>
+                  <li><a href="accountsCharge.jsp" target="iframemain">账户充值 <span class="label-en"></span></a></li>
 			   </ul>
             </li>
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">个人信息 <span class="label-en">system</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-				  <li><a href="">邮件管理 <span class="label-en"></span></a></li>
-                  <li><a href="">我的账户 <span class="label-en"></span></a></li>
-                  <li><a href="">个人资料 <span class="label-en"></span></a></li>
-                  <li><a href="" target="iframemain">修改密码 <span class="label-en"></span></a></li>
+				  <li><a href="emailManagent.jsp" target="iframemain">邮件管理 <span class="label-en"></span></a></li>
+                  <li><a href="myAccounts.jsp" target="iframemain">我的账户 <span class="label-en"></span></a></li>
+                  <li><a href="personalData.jsp" target="iframemain">个人资料 <span class="label-en"></span></a></li>
+                  <li><a href="changePassword.jsp" target="iframemain">修改密码 <span class="label-en"></span></a></li>
 			   </ul>
             </li>
             <li class=""><a href="javascript:;" onclick="ClosePage()"><i class="icon-lock"></i><span class="title">安全退出 <span class="label-en">Logout</span></span> <span class=""></span></a></li>
@@ -171,8 +171,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
     <!-- begin 核心插件 -->
-    <script src="fenxiao/js/jquery-1.10.1.min.js" type="text/javascript"></script>
-    <script src="fenxiao/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="style/js/jquery-1.10.1.min.js" type="text/javascript"></script>
+    <script src="style/js/bootstrap.min.js" type="text/javascript"></script>
     <!--处理兼容问题-->
     <!--[if lt IE 9]>
         <script src="js/excanvas.min.js"></script>
@@ -181,7 +181,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <!--处理兼容问题end-->
 
     <!-- begin 二级导航 -->
-    <script src="fenxiao/js/app.js" type="text/javascript"></script>
+    <script src="style/js/app.js" type="text/javascript"></script>
     <script>
         jQuery(document).ready(function () {
             App.init();

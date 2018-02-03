@@ -10,8 +10,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     <title>登陆页面</title>
     <link href="css/index.css" rel="stylesheet" />
-    <script src="libs/js/jquery1.4.2_min.js"></script>
-    <script src="js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="style/js/jquery1.4.2_min.js"></script>
+    <script src="style/js/jquery.unobtrusive-ajax.min.js"></script>
     <script>
         function genTimestamp() {      
         var time = new Date();      
