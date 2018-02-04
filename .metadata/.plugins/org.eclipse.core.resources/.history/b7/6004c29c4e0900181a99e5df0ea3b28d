@@ -8,10 +8,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>登陆页面</title>
-    <link href="style/css/index.css" rel="stylesheet" />
-    <script src="style/js/jquery-1.7.1.min.js"></script>
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="style/js/jquery1.4.2_min.js"></script>
     <script src="style/js/jquery.unobtrusive-ajax.min.js"></script>
     <script>
         function genTimestamp() {      
@@ -52,16 +51,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
   </head>
   <body>
-    <div class="bigBox">
+     <div class="bigBox">
         <div class="banner">
-            <img src="style/images/banner.png">
+            <img src="images/login/banner.png">
         </div>
     </div>
     <div class="functionBox">
         <div class="topBox">
             <div class="top">
                 <div class="logo">
-                    <img src="style/images/3d.png">
+                    <img src="images/login/3d.png">
                 </div>
             </div>
         </div>
@@ -69,7 +68,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <form action="login"  id="frmSet" method="post">        
 <div class="login">
-    <h2><img src="style/images/logo.png">订单登录</h2>
+            <h2>
+                <img src="images/login/logo.png">
+                订单登录</h2>
             <ul>
                 <li>
                     <label>用户名：</label>
@@ -96,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </li>
             </ul>
             <div class="foot_container">
-                <img src="style/images/loginShadow.png" class="foot_shadow">
+                <img src="images/login/loginShadow.png" class="foot_shadow">
             </div>
         </div>
 </form> 

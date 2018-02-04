@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>登陆页面</title>
-    <link href="style/css/index.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
     <script src="style/js/jquery-1.7.1.min.js"></script>
     <script src="style/js/jquery.unobtrusive-ajax.min.js"></script>
     <script>
