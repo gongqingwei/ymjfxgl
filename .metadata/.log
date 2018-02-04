@@ -2534,3 +2534,367 @@ java.io.IOException: Authorization exception retrieving nexus-maven-repository-i
 
 !ENTRY org.eclipse.osgi 2 1 2018-02-04 09:52:10.090
 !MESSAGE NLS unused message: ConsoleShowPreferencesAction__run_debug_console in: org.eclipse.debug.internal.ui.views.console.ConsoleMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:04:25.838
+!MESSAGE NLS unused message: ContextRunner_16 in: org.eclipse.debug.internal.ui.contextlaunching.ContextMessages
+!SESSION 2018-02-04 11:34:45.765 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_13
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:47.927
+!MESSAGE NLS unused message: provider_invalid_general in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:47.927
+!MESSAGE NLS unused message: provider_invalid in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:47.927
+!MESSAGE NLS unused message: product_notFound in: org.eclipse.core.internal.runtime.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:50.700
+!MESSAGE NLS unused message: IniFileReader_OpenPropError in: org.eclipse.update.internal.configurator.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:50.700
+!MESSAGE NLS unused message: IniFileReader_OpenMapError in: org.eclipse.update.internal.configurator.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.224
+!MESSAGE NLS unused message: url_couldNotResolve in: org.eclipse.core.internal.utils.messages
+
+!ENTRY org.eclipse.core.resources 2 10035 2018-02-04 11:34:53.330
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.689
+!MESSAGE NLS unused message: AboutDialog_featureInfo in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.689
+!MESSAGE NLS unused message: AboutDialog_pluginInfo in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.689
+!MESSAGE NLS unused message: AboutDialog_systemInfo in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.689
+!MESSAGE NLS unused message: Perspective_errorLoadingState in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.689
+!MESSAGE NLS unused message: WorkbenchStatusDialog_Support in: org.eclipse.ui.internal.messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:53.899
+!MESSAGE NLS unused message: PropertyTester_error_activating_plugin in: org.eclipse.core.internal.expressions.ExpressionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:34:59.420
+!MESSAGE NLS unused message: DocumentInputStream_error_read in: org.eclipse.core.internal.filebuffers.FileBuffersMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_super_class in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_error_removed_type in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_error_cannot_create in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_enum_not_applicable in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_annotation_not_applicable in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_anonymous_type_not_applicable in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_already_has_hashCode_equals_error in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_error_not_applicable in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_final_hashCode_equals_in_superclass_error in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:01.531
+!MESSAGE NLS unused message: GenerateHashCodeEqualsAction_interface_not_applicable in: org.eclipse.jdt.internal.ui.actions.ActionMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:02.946
+!MESSAGE NLS unused message: LaunchConfiguration_1 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:02.946
+!MESSAGE NLS unused message: LaunchConfiguration_15 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:02.946
+!MESSAGE NLS unused message: LaunchManager_30 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:02.946
+!MESSAGE NLS unused message: J9VMRunner_0 in: org.eclipse.debug.internal.core.DebugCoreMessages
+
+!ENTRY org.eclipse.jface 2 0 2018-02-04 11:35:11.906
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-02-04 11:35:11.906
+!MESSAGE A conflict occurred for SHIFT+DEL:
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.datatools.sqltools.result.removeAllInstances,Remove All Visible Results,
+		,
+		Category(org.eclipse.datatools.sqltools.result.category,SQL Results View,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.cut,剪切,
+		将选择的内容剪切到剪贴板中,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		org.eclipse.ui.internal.handlers.WidgetMethodHandler@1e1c034,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(SHIFT+DEL,
+	ParameterizedCommand(Command(org.topcased.modeler.deleteModelObject,Delete From Model,
+		Allows the user to delete the selected graph element and its associated model element in a Topcased editor.,
+		Category(org.eclipse.ui.category.edit,编辑,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:19.242
+!MESSAGE NLS unused message: prompt.optclasspath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:19.242
+!MESSAGE NLS unused message: prompt.preclasspath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:19.242
+!MESSAGE NLS unused message: prompt.optlibrarypath in: com.genuitec.eclipse.easie.core.configuration
+
+!ENTRY org.maven.ide.eclipse 4 0 2018-02-04 11:35:19.816
+!MESSAGE Unable to update index for central|http://repo1.maven.org/maven2
+!STACK 0
+java.io.IOException: Authorization exception retrieving nexus-maven-repository-index.properties
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$WagonFetcher.retrieve(DefaultIndexUpdater.java:681)
+	at org.sonatype.nexus.index.updater.AbstractResourceFetcher.retrieve(AbstractResourceFetcher.java:22)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:493)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:74)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:780)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:954)
+	at org.sonatype.nexus.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:138)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1060)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager.updateIndex(NexusIndexManager.java:1013)
+	at org.maven.ide.eclipse.internal.index.NexusIndexManager$1.run(NexusIndexManager.java:624)
+	at org.maven.ide.eclipse.internal.index.IndexUpdaterJob.run(IndexUpdaterJob.java:71)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2018-02-04 11:35:22.021
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY com.skyway.licensing 4 0 2018-02-04 11:35:26.279
+!MESSAGE The MyEclipse for Spring trial period has expired.  Please contact subscriptions@myeclipseide.com
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:29.550
+!MESSAGE NLS unused message: AutomaticUpdatesJob_EclipseUpdates1 in: org.eclipse.update.internal.scheduler.UpdateSchedulerResources
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:29.550
+!MESSAGE NLS unused message: AutomaticUpdatesJob_UpdatesAvailable in: org.eclipse.update.internal.scheduler.UpdateSchedulerResources
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:29.550
+!MESSAGE NLS unused message: AutomaticUpdatesJob_EclipseUpdates2 in: org.eclipse.update.internal.scheduler.UpdateSchedulerResources
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:29.550
+!MESSAGE NLS unused message: AutomaticUpdatesJob_UpdatesDownloaded in: org.eclipse.update.internal.scheduler.UpdateSchedulerResources
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:35:29.550
+!MESSAGE NLS unused message: AutomaticUpdatesJob_Updates in: org.eclipse.update.internal.scheduler.UpdateSchedulerResources
+
+!ENTRY org.eclipse.dltk.core 4 0 2018-02-04 11:35:50.188
+!MESSAGE error saving index
+!STACK 0
+java.io.UTFDataFormatException
+	at org.eclipse.dltk.internal.core.util.Util.writeUTF(Util.java:1430)
+	at org.eclipse.dltk.core.search.index.DiskIndex.writeCategoryTable(DiskIndex.java:1177)
+	at org.eclipse.dltk.core.search.index.DiskIndex.mergeCategory(DiskIndex.java:662)
+	at org.eclipse.dltk.core.search.index.DiskIndex.mergeCategories(DiskIndex.java:605)
+	at org.eclipse.dltk.core.search.index.DiskIndex.mergeWith(DiskIndex.java:726)
+	at org.eclipse.dltk.core.search.index.Index.save(Index.java:243)
+	at org.eclipse.dltk.core.search.indexing.core.SourceModulesRequest.run(SourceModulesRequest.java:85)
+	at org.eclipse.dltk.core.search.indexing.AbstractJob.execute(AbstractJob.java:77)
+	at org.eclipse.dltk.internal.core.search.processing.JobManager.run(JobManager.java:452)
+	at java.lang.Thread.run(Thread.java:619)
+
+!ENTRY org.eclipse.ui 4 0 2018-02-04 11:47:35.099
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (org.eclipse.swt.SWTException: Widget is disposed)
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:137)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3885)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3506)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+Caused by: org.eclipse.swt.SWTException: Widget is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:3884)
+	at org.eclipse.swt.SWT.error(SWT.java:3799)
+	at org.eclipse.swt.SWT.error(SWT.java:3770)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:463)
+	at org.eclipse.swt.widgets.Widget.checkWidget(Widget.java:336)
+	at org.eclipse.swt.widgets.Scrollable.getClientArea(Scrollable.java:168)
+	at com.genuitec.eclipse.webdesigner3.properties.ElementList.resizeColumns(ElementList.java:321)
+	at com.genuitec.eclipse.webdesigner3.properties.ElementList$4.run(ElementList.java:202)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	... 22 more
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 11:55:55.541
+!MESSAGE NLS unused message: ConsoleShowPreferencesAction__run_debug_console in: org.eclipse.debug.internal.ui.views.console.ConsoleMessages
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-02-04 13:06:22.718
+!MESSAGE 内部错误
+!STACK 1
+Java Model Exception: Java Model Status [metal [in metal.class [in com.sun.swing.internal.plaf.metal.resources [in C:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar]]] 的 Javadoc 格式未知]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-02-04 13:06:22.718
+!MESSAGE metal [in metal.class [in com.sun.swing.internal.plaf.metal.resources [in C:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar]]] 的 Javadoc 格式未知
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:18.212
+!MESSAGE NLS unused message: LaunchConfigurationTabGroupViewer_9 in: org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:18.213
+!MESSAGE NLS unused message: LaunchConfigurationDialog_Save_changes__31 in: org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:18.213
+!MESSAGE NLS unused message: LaunchConfigurationFilteredTree_type_filter_text in: org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationsMessages
+
+!ENTRY org.eclipse.ui 4 4 2018-02-04 13:18:19.412
+!MESSAGE 部件已在页面布局中存在：org.eclipse.debug.ui.ExpressionView。
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:19.848
+!MESSAGE NLS unused message: breadcrumb_LabelPending in: org.eclipse.debug.internal.ui.views.launch.LaunchViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.008
+!MESSAGE NLS unused message: VariablesView__Copy_8 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.008
+!MESSAGE NLS unused message: VariablesView__Paste_14 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.009
+!MESSAGE NLS unused message: VariablesView_Co_ntent_Assist_3 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.009
+!MESSAGE NLS unused message: VariablesView_Cu_t_11 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.010
+!MESSAGE NLS unused message: VariablesView_Error_1 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.010
+!MESSAGE NLS unused message: VariablesView_Select__All_5 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.011
+!MESSAGE NLS unused message: VariablesView_Unable_to_configure_variable_details_area__2 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:20.011
+!MESSAGE NLS unused message: VariablesView_56 in: org.eclipse.debug.internal.ui.views.variables.VariablesViewMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:21.378
+!MESSAGE NLS unused message: VariableColumnPresentation_4 in: org.eclipse.debug.internal.ui.elements.adapters.Messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:21.378
+!MESSAGE NLS unused message: VariableColumnPresentation_5 in: org.eclipse.debug.internal.ui.elements.adapters.Messages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:21.546
+!MESSAGE NLS unused message: AddMemoryRenderingAction_Add_rendering_failed in: org.eclipse.debug.internal.ui.DebugUIMessages
+
+!ENTRY org.eclipse.osgi 2 1 2018-02-04 13:18:21.546
+!MESSAGE NLS unused message: AddMemoryRenderingAction_Unable_to_add_selected_renderings in: org.eclipse.debug.internal.ui.DebugUIMessages
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-02-04 13:19:01.896
+!MESSAGE 内部错误
+!STACK 1
+Java Model Exception: Java Model Status [Use [in SOAPBinding$Use.class [in javax.jws.soap [in C:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar]]] 的 Javadoc 格式未知]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-02-04 13:19:01.896
+!MESSAGE Use [in SOAPBinding$Use.class [in javax.jws.soap [in C:\Program Files\Genuitec\Common\binary\com.sun.java.jdk.win32.x86_1.6.0.013\jre\lib\rt.jar]]] 的 Javadoc 格式未知
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-02-04 13:21:53.960
+!MESSAGE 内部错误
+!STACK 1
+Java Model Exception: Java Model Status [HttpServletResponse [in HttpServletResponse.class [in javax.servlet.http [in C:\Program Files\Genuitec\Common\plugins\com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\data\libraryset\EE_5\javaee.jar]]] 的 Javadoc 格式未知]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-02-04 13:21:53.960
+!MESSAGE HttpServletResponse [in HttpServletResponse.class [in javax.servlet.http [in C:\Program Files\Genuitec\Common\plugins\com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\data\libraryset\EE_5\javaee.jar]]] 的 Javadoc 格式未知
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-02-04 13:22:05.352
+!MESSAGE 内部错误
+!STACK 1
+Java Model Exception: Java Model Status [HttpServletRequest [in HttpServletRequest.class [in javax.servlet.http [in C:\Program Files\Genuitec\Common\plugins\com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\data\libraryset\EE_5\javaee.jar]]] 的 Javadoc 格式未知]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:442)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:96)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:76)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:59)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:548)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-02-04 13:22:05.352
+!MESSAGE HttpServletRequest [in HttpServletRequest.class [in javax.servlet.http [in C:\Program Files\Genuitec\Common\plugins\com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\data\libraryset\EE_5\javaee.jar]]] 的 Javadoc 格式未知
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2018-02-04 13:45:38.549
+!MESSAGE 内部错误
+!STACK 1
+Java Model Exception: Java Model Status [HttpServletRequest [in HttpServletRequest.class [in javax.servlet.http [in C:\Program Files\Genuitec\Common\plugins\com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\data\libraryset\EE_5\javaee.jar]]] 的 Javadoc 格式未知]
+	at org.eclipse.jdt.internal.core.JavadocContents.getTypeDoc(JavadocContents.java:86)
+	at org.eclipse.jdt.internal.core.BinaryType.getAttachedJavadoc(BinaryType.java:996)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:462)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:512)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:495)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:129)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1009 2018-02-04 13:45:38.549
+!MESSAGE HttpServletRequest [in HttpServletRequest.class [in javax.servlet.http [in C:\Program Files\Genuitec\Common\plugins\com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\data\libraryset\EE_5\javaee.jar]]] 的 Javadoc 格式未知

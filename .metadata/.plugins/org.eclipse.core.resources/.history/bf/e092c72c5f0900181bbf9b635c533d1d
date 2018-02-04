@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- namespace的值一定是接口的全路径与接口绑定后,此文件相当于接口的实现类  -->
+<mapper namespace="com.gqw.dao.commodity.CommodityMapper">
+<select id="selectAllCommodity"  resultType="com.gqw.bean.Commodity" >
+	select * from commodity
+</select>
+<select id="selectPageCommodity" resultType="com.gqw.bean.Commodity" parameterType="int">
+	select * from commodity limit #{username},#{password};
+</select>
+<select id="conditionPageCommodity" resultType="com.gqw.bean.Commodity" parameterType="string">
+	select * from commodity  where 1=1
+	<if test="proName!=null">
+	and name LIKE CONCAT(CONCAT('%', #{proName, jdbcType=VARCHAR}),'%')
+	</if>
+	<if test="ProCategory!=null and ProCategory !=''">
+	and type = #{ProCategory,jdbcType=VARCHAR}
+	</if>
+	limit #{start},#{pageSize}
+</select>
+<select id="countCommodities" resultType="java.lang.Integer">
+	select count(*) from commodity;
+</select>
+<select id="selectOneCommodity" parameterType="string" resultType="com.gqw.bean.Commodity">
+	select * from commodity where id=#{commodityId}
+</select>
+</mapper>

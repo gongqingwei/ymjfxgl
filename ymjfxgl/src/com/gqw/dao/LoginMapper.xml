@@ -5,7 +5,14 @@
 	<!-- namespace的值一定是接口的全路径与接口绑定后,此文件相当于接口的实现类  -->
 <mapper namespace="com.gqw.dao.LoginMapper">
 <select id="login"  resultType="com.gqw.bean.User" parameterType="string">
-	select * from login where username=#{0} and password=#{1}
+	select * from login where username=#{username} and password=#{password} 
+	<if test="pwd!=null">
+		and secondpassword=#{pwd}
+	</if>
+	<if test="thirdpwd!=null">
+		and thirdpassword=#{thirdpwd}
+	</if>
 </select>
+
 </mapper>
 

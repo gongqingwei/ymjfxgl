@@ -13,6 +13,7 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
@@ -27,15 +28,16 @@ import com.gqw.dao.LoginMapper;
 @Controller
 public class LoginController {
 	private String code;
+	private static String myUsername;
+	private static String myPassword;
 	
 	@Autowired
 	private LoginMapper loginMapper;
 	@RequestMapping("login")
-	public String isLogin(Map map,String username,String password,String user_input_verifyCode){
-		
-		User user=loginMapper.login(username,password);
-		
-		
+	public String isLogin(Map map,String username,String password,String user_input_verifyCode,String pwd,String thirdpwd){
+		myUsername=username;
+		myPassword=password;
+		User user=loginMapper.login(username,password,pwd,thirdpwd);
 		if(user==null){
 			System.out.println("用户名或者密码错了");
 			return "index";
@@ -110,4 +112,64 @@ public class LoginController {
 	        String s = "ABCDEFGHJKLMNPRSTUVWXYZ0123456789";  
 	        return s.charAt(r.nextInt(s.length()));  
 	    } 
+	 @RequestMapping("reinvestmentAndBonusList")
+	 public String yanzhengreinvestmentAndBonusList(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 if(user!=null){
+			 return "reinvestmentAndBonusList";
+		 }else{
+			 request.setAttribute("jspName", "reinvestmentAndBonusList");
+			 return "secondPassword"; 
+		 }
+	 }
+	 @RequestMapping("financeStatistics")
+	 public String yanzhengfinanceStatistics(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 if(user!=null){
+			 return "financeStatistics";
+		 }else{
+			 request.setAttribute("jspName", "financeStatistics");
+			 return "secondPassword"; 
+		 }
+	 }
+	 @RequestMapping("accountWithdrawal")
+	 public String yanzhengaccountWithdrawal(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 if(user!=null){
+			 return "accountWithdrawal";
+		 }else{
+			 request.setAttribute("jspName", "accountWithdrawal");
+			 return "secondPassword"; 
+		 }
+	 }
+	 @RequestMapping("accountTransfer")
+	 public String yanzhengaccountTransfer(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 if(user!=null){
+			 return "accountTransfer";
+		 }else{
+			 request.setAttribute("jspName", "accountTransfer");
+			 return "secondPassword"; 
+		 }
+	 }
+	 @RequestMapping("myAccounts")
+	 public String yanzhengmyAccounts(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 if(user!=null){
+			 return "myAccounts";
+		 }else{
+			 request.setAttribute("jspName", "myAccounts");
+			 return "secondPassword"; 
+		 }
+	 }
+	 @RequestMapping("changePassword")
+	 public String yanzhengchangePassword(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 if(user!=null){
+			 return "changePassword";
+		 }else{
+			 request.setAttribute("jspName", "changePassword");
+			 return "thirdPassword"; 
+		 }
+	 }
 }

@@ -1,3 +1,4 @@
+
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
 <%
 String path = request.getContextPath();
@@ -115,7 +116,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">业务管理 <span class="label-en">business</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
                   <li><a href="registeredOrder.jsp" target="iframemain">注册订单 <span class="label-en"></span></a></li>
-                  <li><a href="reinvestmentAndBonusList.jsp" target="iframemain">复投与分红列表 <span class="label-en"></span></a></li>
+                  <li><a href="secondPassword.jsp?jspName=reinvestmentAndBonusList" target="iframemain">复投与分红列表 <span class="label-en"></span></a></li>
                   <li><a href="applicationReportingCenter.jsp" target="iframemain">申请报单中心 <span class="label-en"></span></a></li>
 			   </ul>
             </li>
@@ -128,9 +129,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class=""><a href="javascript:;"><i class="icon-tags"></i><span class="title">财务管理 <span class="label-en">Finance</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
                   <li><a href="bonusDetails.jsp" target="iframemain">奖金明细 <span class="label-en"></span></a></li>
-                  <li><a href="financeStatistics.jsp" target="iframemain">财务统计 <span class="label-en"></span></a></li>
-                  <li><a href="accountWithdrawal.jsp" target="iframemain">账户提现 <span class="label-en"></span></a></li>
-                  <li><a href="accountTransfer.jsp" target="iframemain">账户转账 <span class="label-en"></span></a></li>
+                  <li><a href="secondPassword.jsp?jspName=financeStatistics" target="iframemain">财务统计 <span class="label-en"></span></a></li>
+                  <li><a href="secondPassword.jsp?jspName=accountWithdrawal" target="iframemain">账户提现 <span class="label-en"></span></a></li>
+                  <li><a href="secondPassword.jsp?jspName=accountTransfer" target="iframemain">账户转账 <span class="label-en"></span></a></li>
                   <li><a href="accountConversion.jsp" target="iframemain">账户转换 <span class="label-en"></span></a></li>
                   <li><a href="accountsCharge.jsp" target="iframemain">账户充值 <span class="label-en"></span></a></li>
 			   </ul>
@@ -138,9 +139,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">个人信息 <span class="label-en">system</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
 				  <li><a href="emailManagent.jsp" target="iframemain">邮件管理 <span class="label-en"></span></a></li>
-                  <li><a href="myAccounts.jsp" target="iframemain">我的账户 <span class="label-en"></span></a></li>
+                  <li><a href="secondPassword.jsp?jspName=myAccounts" target="iframemain">我的账户 <span class="label-en"></span></a></li>
                   <li><a href="personalData.jsp" target="iframemain">个人资料 <span class="label-en"></span></a></li>
-                  <li><a href="changePassword.jsp" target="iframemain">修改密码 <span class="label-en"></span></a></li>
+                  <li><a href="thirdPassword.jsp?jspName=changePassword" target="iframemain">修改密码 <span class="label-en"></span></a></li>
 			   </ul>
             </li>
             <li class=""><a href="javascript:;" onclick="ClosePage()"><i class="icon-lock"></i><span class="title">安全退出 <span class="label-en">Logout</span></span> <span class=""></span></a></li>
