@@ -1,0 +1,12 @@
+package com.gqw.dao.order;
+
+import com.gqw.bean.Order;
+
+public interface MyOrder {
+	/**
+	 * 创建一条订单
+	 * @param order
+	 * @return
+	 */
+	public Boolean insertOrder(Order order);
+}

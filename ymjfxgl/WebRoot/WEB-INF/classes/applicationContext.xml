@@ -26,6 +26,9 @@
 	<property name="mapperInterface" value="com/gqw/dao/commodity/CommodityMapper"></property>
 	<property name="sqlSessionFactory" ref="sqlSession"></property>
 </bean>
-
+<bean name="MyOrderMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/order/MyOrderMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
 
 </beans>

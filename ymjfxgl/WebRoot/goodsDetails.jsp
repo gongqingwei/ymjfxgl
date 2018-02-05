@@ -164,7 +164,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <!--#include file="incBottom.asp"-->
 <div id="js_look" style="z-index: 100000; position: absolute; top: 200px; left: 0px; width: 100%; font-weight: bold; font-size: 16px; text-align: center; filter: alpha(opacity=98); color: #666666; display: none;">
-<form action="/Mall/Views" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">       
+<form action="insertOrder" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">       
  <table width="524" border="1" align="center" cellpadding="4" cellspacing="1" bgcolor="#aa0000" style="background-color: #20afd5; margin: auto; filter: alpha(opacity=100);">
    <tr><td height="30" colspan="2" align="center" valign="top" bgcolor="#C9DBE0" style="color: #FFFFFF;">
           <div style="float: left; width: 55%; text-align: right;">提交订单</div>
@@ -172,23 +172,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        </td>
    </tr>
    <tr><td width="110" align="right" bgcolor="#FFFFFF">商品名称：</td>
-       <td align="left" bgcolor="#FFFFFF" style="font-size: 12px; font-weight: normal;">&nbsp;茵曼金螺旋藻(40克/瓶)</td>
+       <td align="left" bgcolor="#FFFFFF" style="font-size: 12px; font-weight: normal;">&nbsp;${commodity.name}</td>
    </tr>
    <tr rowspan="2">
        <td align="right" bgcolor="#FFFFFF" >商品价格：</td>
-       <td align="left" bgcolor="#FFFFFF" style="font-size: 12px; font-weight: normal;"><span style="color:#f00">100.0000</span></td> 
+       <td align="left" bgcolor="#FFFFFF" style="font-size: 12px; font-weight: normal;"><span style="color:#f00">${commodity.integral}</span></td> 
    </tr>
    <tr><td align="right" bgcolor="#FFFFFF">购买数量：</td>
        <td align="left" bgcolor="#FFFFFF" ><input name="ps1" id="ps1" size="25" maxlength="80" style="width:130px;margin-left:4px;" /></td>
    </tr>
    <tr><td align="right" bgcolor="#FFFFFF">收货人：</td>
-       <td align="left" bgcolor="#FFFFFF"><input name="nickName" id="nickName" size="25" maxlength="18" style="width:130px;margin-left:4px;" value="唐新平" /></td>
+       <td align="left" bgcolor="#FFFFFF"><input name="nickName" id="nickName" size="25" maxlength="18" style="width:130px;margin-left:4px;" value="" /></td>
    </tr>
    <tr><td align="right" bgcolor="#FFFFFF">收货地址：</td>
        <td align="left" bgcolor="#FFFFFF"><input name="address" id="address" size="25" maxlength="80" style="width:130px;margin-left:4px;" /></td>
    </tr>
    <tr><td align="right" bgcolor="#FFFFFF">联系电话：</td>
-       <td align="left" bgcolor="#FFFFFF"><input name="tels" id="tels" size="25" style="width:130px;margin-left:4px;" value="18377061863" /></td>
+       <td align="left" bgcolor="#FFFFFF"><input name="tels" id="tels" size="25" style="width:130px;margin-left:4px;" value="" /></td>
    </tr>
    <tr><td align="right" bgcolor="#FFFFFF">备注：</td>
        <td align="left" bgcolor="#FFFFFF"><textarea name="about" cols="25" id="about" style="width: 400px; height: 100px; margin-left: 4px;"></textarea></td>

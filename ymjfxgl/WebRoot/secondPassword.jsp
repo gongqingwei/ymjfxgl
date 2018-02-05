@@ -20,7 +20,7 @@
 		<link href="style/css/StyleSheet.css" rel="stylesheet" />
 		<script src="style/js/jquery-1.7.1.min.js">
 </script>
-		<script src="style/s/jquery.unobtrusive-ajax.min.js">
+		<script src="style/js/jquery.unobtrusive-ajax.min.js">
 </script>
 		<script>
 //提交后返回结果

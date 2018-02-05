@@ -59,6 +59,33 @@ public class LoginController {
 		}
 	}
 	
+	@RequestMapping("registerOrder")
+	public String registerOrder(String UserID,String password,String passopen,String passencry,String regNum,String reName,String shopNumber,String userName,String userTels,String userCode,String userAddress,String bankName,String bankBranch,String bankAddress,String bankUser,String bankCard){
+		User user=new User();
+		user.setUsername(UserID);
+		user.setPassword(password);
+		user.setSeondpassword(passopen);
+		user.setThirdpassword(passencry);
+		user.setRengounumber(Integer.parseInt(regNum));
+		user.setTuijianrennumber(reName);
+		user.setBaodancenternumber(shopNumber);
+		user.setTruename(userName);
+		user.setPhonenumber(userTels);
+		user.setShenfenzhengnumber(userCode);
+		user.setAdress(userAddress);
+		user.setBankmessage(bankName);
+		user.setBankzhihang(bankBranch);
+		user.setBankfenlichu(bankAddress);
+		user.setKaihuname(bankUser);
+		user.setBanknumber(bankCard);
+		Boolean bool=loginMapper.insertOrder(user);
+		if(bool){
+			System.out.println("插入数据成功");
+			return "";
+		}else{
+			return "registeredOrder";
+		}
+	}
 	
 	@RequestMapping("/getVerifyCode")  
     public void generate(HttpServletResponse response, HttpSession session) {  

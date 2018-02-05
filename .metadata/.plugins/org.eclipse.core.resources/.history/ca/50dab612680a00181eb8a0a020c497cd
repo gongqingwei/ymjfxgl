@@ -1,0 +1,5 @@
+package com.gqw.service.order;
+
+public class MyOrderService {
+
+}

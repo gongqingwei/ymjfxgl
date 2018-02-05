@@ -1,0 +1,25 @@
+package com.gqw.controller.myorder;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.Order;
+import com.gqw.service.order.MyOrderServiceImpl;
+@Controller
+public class MyOrderController {
+	@Autowired
+	private MyOrderServiceImpl myOrderServiceImpl;
+	@RequestMapping("insertOrder")
+	public String insertOrder(String sOrderID,String sFlag,String startDate){
+		Order order=new Order();
+		order.setOrdernumber("");
+		Boolean bool=myOrderServiceImpl.insertOrder(order);
+		if(bool){
+			System.out.println("数据插入成功");
+			return "commodityList";
+		}else{
+			return "";
+		}
+	}
+}

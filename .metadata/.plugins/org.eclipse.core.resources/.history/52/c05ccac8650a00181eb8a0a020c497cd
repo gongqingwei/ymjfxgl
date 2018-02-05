@@ -1,0 +1,5 @@
+package com.gqw.dao.order;
+
+public interface MyOrder {
+	public Boolearn insertOrder(Order order);
+}

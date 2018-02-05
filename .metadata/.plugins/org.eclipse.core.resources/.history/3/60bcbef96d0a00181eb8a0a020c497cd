@@ -1,0 +1,16 @@
+package com.gqw.service.order;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.gqw.bean.Order;
+import com.gqw.dao.order.MyOrder;
+
+public class MyOrderServiceImpl implements MyOrderService{
+	@Autowired
+	private MyOrder myorder;
+	public Boolean insertOrder(Order order) {
+		// TODO Auto-generated method stub
+		return myorder.insertOrder(order);
+	}
+
+}

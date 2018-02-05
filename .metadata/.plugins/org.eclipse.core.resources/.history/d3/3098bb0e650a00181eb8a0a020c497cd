@@ -1,0 +1,5 @@
+package com.gqw.bean;
+
+public class MyOrder {
+
+}

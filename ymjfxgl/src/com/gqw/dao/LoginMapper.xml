@@ -7,12 +7,16 @@
 <select id="login"  resultType="com.gqw.bean.User" parameterType="string">
 	select * from login where username=#{username} and password=#{password} 
 	<if test="pwd!=null">
-		and secondpassword=#{pwd}
+		and seondpassword=#{pwd}
 	</if>
 	<if test="thirdpwd!=null">
 		and thirdpassword=#{thirdpwd}
 	</if>
 </select>
+<insert id="insertOrder" parameterType="com.gqw.bean.User" >
+	insert into login(username,password,identity,seondpassword,thirdpassword,rengounumber,tuijianrennumber,baodancenternumber,truename,phonenumber,shenfenzhengnumber,adress,bankmessage,bankzhihang,bankfenlichu,kaihuname,banknumber)
+	values(#{username},#{password},#{password},#{seondpassword},#{thirdpassword},#{rengounumber},#{tuijianrennumber},#{tuijianrennumber},#{truename},#{phonenumber},#{shenfenzhengnumber},#{adress},#{bankmessage},#{bankzhihang},#{bankfenlichu},#{kaihuname},#{banknumber});
+</insert>
 
 </mapper>
 

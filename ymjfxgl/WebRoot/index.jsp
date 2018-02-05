@@ -69,7 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <form action="login"  id="frmSet" method="post">        
 <div class="login">
-    <h2><img src="style/images/logo.png">订单登录</h2>
+    <h2><img src="style/images/indexlogo.png">订单登录</h2>
             <ul>
                 <li>
                     <label>用户名：</label>
