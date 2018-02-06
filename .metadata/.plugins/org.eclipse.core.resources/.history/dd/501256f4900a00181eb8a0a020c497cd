@@ -1,0 +1,48 @@
+package com.gqw.controller.myorder;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.Order;
+import com.gqw.service.order.MyOrderServiceImpl;
+@Controller
+public class MyOrderController {
+	@Autowired
+	private MyOrderServiceImpl myOrderServiceImpl;
+	@RequestMapping("insertOrder")
+	public String insertOrder(String ps1,String nickName,String address,String tels,String about,String commodityName,float commodityPrice){
+		Order order=new Order();
+		Date day=new Date();    
+		SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+		String a=df.format(day);
+		SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
+		String today=df1.format(day);
+		int five=(int) (Math.random()*90000+10000);
+		String b=String.valueOf(five);
+		StringBuffer sb=new StringBuffer();
+		sb.append(a).append(b);
+		String ordernumber=sb.toString();
+		order.setOrdernumber(ordernumber);
+		order.setName(commodityName);
+		order.setNumbers(Integer.parseInt(ps1));
+		Float money=commodityPrice*Integer.parseInt(ps1);
+		order.setMoney(money);
+		order.setOrdertime(today);
+		order.setShouhuoren(nickName);
+		order.setShouhuoaddress(address);
+		order.setPhonenumber(tels);
+		order.setStatus("未发货");
+		
+		Boolean bool=myOrderServiceImpl.insertOrder(order);
+		if(bool){
+			System.out.println("数据插入成功");
+			return "commodityList";
+		}else{
+			return "";
+		}
+	}
+}

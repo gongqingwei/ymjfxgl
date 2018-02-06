@@ -1,0 +1,28 @@
+package com.gqw.dao.jifendianzibi;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.gqw.bean.JifendianzibiOrder;
+import com.gqw.bean.Order;
+
+public interface JifendianzibiMapper {
+	/**
+	 * 插入一条积分电子币订单
+	 * @return
+	 */
+	public Boolean insertJifendianzibi(JifendianzibiOrder jifendianzibiOrder);
+	/**
+	 * 条件分页查询
+	 * @param start
+	 * @param pageSize
+	 * @param loginId
+	 * @param ordernumber
+	 * @param status
+	 * @param date1
+	 * @param date2
+	 * @return
+	 */
+	public List<JifendianzibiOrder> conditionPageOrder(@Param("start")int start,@Param("pageSize")int pageSize,@Param("loginId")String loginId,@Param("ordernumber")String ordernumber,@Param("date1")String date1,@Param("date2")String date2);
+}

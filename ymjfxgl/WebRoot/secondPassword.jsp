@@ -69,6 +69,8 @@ function AfterAdd(result) {
 
 					<form action="<%=jspName %>" method="post">
 						<span>二级密码：</span>
+						<input type="hidden" name="start" value="1">
+						<input type="hidden" name="pageSize" value="9">
 						<input name="pwd" type="password" id="OPass" style="width: 200px;"
 							maxlength="20" value="">
 						<input type="hidden" name="url" value="/Bonus/CashInfo" />

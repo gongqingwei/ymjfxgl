@@ -1,0 +1,9 @@
+package com.gqw.dao.jifendianzibi;
+
+public interface JifendianzibiMapper {
+	/**
+	 * 插入一条积分电子币订单
+	 * @return
+	 */
+	public Boolean insertJifendianzibi();
+}

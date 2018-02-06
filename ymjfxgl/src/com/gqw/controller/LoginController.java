@@ -24,35 +24,83 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.gqw.bean.User;
 import com.gqw.dao.LoginMapper;
+import com.gqw.util.PublicParameters;
 
 @Controller
 public class LoginController {
 	private String code;
-	private static String myUsername;
-	private static String myPassword;
+//	private static String myUsername;
+//	private static String myPassword;
 	
 	@Autowired
 	private LoginMapper loginMapper;
 	@RequestMapping("login")
 	public String isLogin(Map map,String username,String password,String user_input_verifyCode,String pwd,String thirdpwd){
-		myUsername=username;
-		myPassword=password;
 		User user=loginMapper.login(username,password,pwd,thirdpwd);
 		if(user==null){
-			System.out.println("ÓÃ»§Ãû»òÕßÃÜÂë´íÁË");
+			System.out.println("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			return "index";
 		}else if(code==null){
-			System.out.println("ÑéÖ¤ÂëÎ´Éú³É");
+			System.out.println("ï¿½ï¿½Ö¤ï¿½ï¿½Î´ï¿½ï¿½ï¿½");
 			return "index";
 		}else if(!code.equals(user_input_verifyCode)){
-			System.out.println("ÑéÖ¤Âë´íÎó");
+			System.out.println("ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½ï¿½");
 			return "index";
 		}else{
-			
-			
+			PublicParameters.id=Integer.parseInt(user.getId());
+			PublicParameters.username=user.getUsername();
+			PublicParameters.password=user.getPassword();
+			if(user.getSeondpassword()!=null){				
+				PublicParameters.seondpassword=user.getSeondpassword();
+			}
+			if(user.getThirdpassword()!=null){
+				PublicParameters.thirdpassword=user.getThirdpassword();
+			}
+			if((Object)user.getRengounumber()!=null){
+				PublicParameters.rengounumber=user.getRengounumber();
+			}
+			if((Object)user.getRengounumber()!=null){
+				PublicParameters.rengounumber=user.getRengounumber();
+			}
+			if(user.getTuijianrennumber()!=null){
+				PublicParameters.tuijianrennumber=user.getTuijianrennumber();
+			}
+			if(user.getBaodancenternumber()!=null){
+				PublicParameters.baodancenternumber=user.getBaodancenternumber();
+			}
+			if(user.getTruename()!=null){
+				PublicParameters.truename=user.getTruename();
+			}
+			if(user.getPhonenumber()!=null){
+				PublicParameters.phonenumber=user.getPhonenumber();
+			}
+			if(user.getShenfenzhengnumber()!=null){
+				PublicParameters.shenfenzhengnumber=user.getShenfenzhengnumber();
+			}
+			if(user.getAdress()!=null){
+				PublicParameters.adress=user.getAdress();
+			}
+			if(user.getBankmessage()!=null){
+				PublicParameters.bankmessage=user.getBankmessage();
+			}
+			if(user.getBankzhihang()!=null){
+				PublicParameters.bankzhihang=user.getBankzhihang();
+			}
+			if(user.getBankfenlichu()!=null){
+				PublicParameters.bankfenlichu=user.getBankfenlichu();
+			}
+			if(user.getKaihuname()!=null){
+				PublicParameters.kaihuname=user.getKaihuname();
+			}
+			if(user.getBanknumber()!=null){
+				PublicParameters.banknumber=user.getBanknumber();
+			}
+			if((Object)user.getIdentity()!=null){
+				PublicParameters.identity=user.getIdentity();
+			}
 			map.put("user", user);
 			System.out.println("user:"+user.getUsername());
-			System.out.println("´«Öµ£º"+username);
+			System.out.println("ï¿½ï¿½Öµï¿½ï¿½"+username);
 			user_input_verifyCode="";
 			code="";
 			return "main";
@@ -61,6 +109,7 @@ public class LoginController {
 	
 	@RequestMapping("registerOrder")
 	public String registerOrder(String UserID,String password,String passopen,String passencry,String regNum,String reName,String shopNumber,String userName,String userTels,String userCode,String userAddress,String bankName,String bankBranch,String bankAddress,String bankUser,String bankCard){
+		
 		User user=new User();
 		user.setUsername(UserID);
 		user.setPassword(password);
@@ -78,10 +127,11 @@ public class LoginController {
 		user.setBankfenlichu(bankAddress);
 		user.setKaihuname(bankUser);
 		user.setBanknumber(bankCard);
+		
 		Boolean bool=loginMapper.insertOrder(user);
 		if(bool){
-			System.out.println("²åÈëÊý¾Ý³É¹¦");
-			return "";
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý³É¹ï¿½");
+			return "commodityList";
 		}else{
 			return "registeredOrder";
 		}
@@ -103,7 +153,7 @@ public class LoginController {
     }  
 	 private String drawImg(ByteArrayOutputStream output) {  
 	        code = "";  
-	        // Ëæ»ú²úÉú4¸ö×Ö·û  
+	        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½Ö·ï¿½  
 	        for (int i = 0; i < 4; i++) {  
 	            code += randomChar();  
 	        }  
@@ -112,7 +162,7 @@ public class LoginController {
 	        BufferedImage bi = new BufferedImage(width, height,  
 	                BufferedImage.TYPE_3BYTE_BGR);  
 	        Font font = new Font("Times New Roman", Font.PLAIN, 20);  
-	        // µ÷ÓÃGraphics2D»æ»­ÑéÖ¤Âë  
+	        // ï¿½ï¿½ï¿½ï¿½Graphics2Dï¿½æ»­ï¿½ï¿½Ö¤ï¿½ï¿½  
 	        Graphics2D g = bi.createGraphics();  
 	        g.setFont(font);  
 	        Color color = new Color(66, 2, 82);  
@@ -139,19 +189,10 @@ public class LoginController {
 	        String s = "ABCDEFGHJKLMNPRSTUVWXYZ0123456789";  
 	        return s.charAt(r.nextInt(s.length()));  
 	    } 
-	 @RequestMapping("reinvestmentAndBonusList")
-	 public String yanzhengreinvestmentAndBonusList(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
-		 if(user!=null){
-			 return "reinvestmentAndBonusList";
-		 }else{
-			 request.setAttribute("jspName", "reinvestmentAndBonusList");
-			 return "secondPassword"; 
-		 }
-	 }
+	
 	 @RequestMapping("financeStatistics")
 	 public String yanzhengfinanceStatistics(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 return "financeStatistics";
 		 }else{
@@ -161,7 +202,7 @@ public class LoginController {
 	 }
 	 @RequestMapping("accountWithdrawal")
 	 public String yanzhengaccountWithdrawal(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 return "accountWithdrawal";
 		 }else{
@@ -171,7 +212,7 @@ public class LoginController {
 	 }
 	 @RequestMapping("accountTransfer")
 	 public String yanzhengaccountTransfer(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 return "accountTransfer";
 		 }else{
@@ -181,7 +222,7 @@ public class LoginController {
 	 }
 	 @RequestMapping("myAccounts")
 	 public String yanzhengmyAccounts(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 return "myAccounts";
 		 }else{
@@ -191,7 +232,7 @@ public class LoginController {
 	 }
 	 @RequestMapping("changePassword")
 	 public String yanzhengchangePassword(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(myUsername, myPassword, pwd, thirdpwd);
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 return "changePassword";
 		 }else{

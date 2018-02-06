@@ -30,5 +30,8 @@
 	<property name="mapperInterface" value="com/gqw/dao/order/MyOrderMapper"></property>
 	<property name="sqlSessionFactory" ref="sqlSession"></property>
 </bean>
-
+<bean name="jifendianzibiMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/jifendianzibi/JifendianzibiMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
 </beans>

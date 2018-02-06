@@ -10,12 +10,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
  <meta name="viewport" content="width=device-width" />
     <title>我的账户</title>
-    <link href="style/css/index.css" rel="stylesheet" type="text/css">
+    <link href="style/css/css/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="style/css/font-awesome.min.css">
     <script src="style/js/jquery-1.10.1.min.js"></script>
     <script src="style/js/all.js"></script>
     <!--6.8-->
-    <link rel="stylesheet" type="text/css" href="/style/css/pipei.css">
+    <link rel="stylesheet" type="text/css" href="style/css/pipei.css">
     <script type="text/javascript">
         $(document).ready(function () {
             $(".btn-details").click(function () {
@@ -121,7 +121,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </div>
 
         </div>
-  </div>
 </body>
 </html>
 

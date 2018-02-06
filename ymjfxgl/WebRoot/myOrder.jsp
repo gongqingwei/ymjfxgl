@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@page import="com.gqw.util.PublicParameters"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -46,12 +48,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
             <div class="listing_box">
-<form action="/Mall/RegOrder" data-ajax="true" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-update="#ListContent" id="searchForm" method="post">                        <label style="margin-left:10px;">购物积分余额：12.00</label>  
+<form action="conditionOrderPageQuery" data-ajax="true" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-update="#ListContent" id="searchForm" method="post">                        <label style="margin-left:10px;">购物积分余额：12.00</label>  
+                   <input type="hidden" name="start" value="1">
+               		<input type="hidden" name="pageSize" value="9">
                     <ul class="search">   
                         <li>
                             <div class="group">
                                 <label class="label">订单编号：</label> 
-                                <input name="sOrderID" id="sOrderID" type="text" class="input" size="10"  />
+                                <input name="ordernumber" id="sOrderID" type="text" class="input" size="10"  />
                                 <label class="label">订单状态：</label> 
                                 <select name="sFlag" id="sFlag" class="selectbox">
                                     <option value="">所有状态</option>
@@ -60,11 +64,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <option value="2">已收货</option>
                                 </select>
                                 <label class="label">订单日期：</label> 
-                                <input id="startDate" name="startDate" type="text" class="input"  onclick="WdatePicker()" size="10" value="" readonly="ture" />
+                                <input id="startDate" name="date1" type="text" class="input"  onclick="WdatePicker()" size="10" value="" readonly="ture" />
                                 <label class="label">至</label> 
                             </div>
                             <div class="group">  
-                                <input id="overDate" name="overDate" type="text" class="input" onclick="WdatePicker()" size="10" value="" readonly="ture" />
+                                <input id="overDate" name="date2" type="text" class="input" onclick="WdatePicker()" size="10" value="" readonly="ture" />
                                 <input name="" type="submit" class="searchbtn" value="搜 索" />
 
                             </div>
@@ -266,104 +270,26 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th>状态</th>
         <th>操作</th>
     </tr>
+        
+        <c:forEach var="order" items="${orders}">
         <tr>
-            <input type="hidden" id="orderID_176797" value="2017112802405589271" />
-            <td align="center">2017112802<br />
-                405589271</td>
-            <td align="center">金花茶牡蛎颗粒片（32克/瓶）</td>
-            <td align="center">2</td>
-            <td align="center">596.00</td>
-            <td align="center">2017-11-28</td>
-            <td align="center">唐新平</td>
-            <td align="center">自提</td>
-            <td align="center">18377061863</td>
+            <input type="hidden" name="ordernumber" id="orderID_176788" value="${order.ordernumber}" />
+            <td align="center">${order.ordernumber}</td>
+            <td align="center">${order.name}</td>
+            <td align="center">${order.numbers}</td>
+            <td align="center">${order.money}</td>
+            <td align="center">${order.ordertime}</td>
+            <td align="center">${order.shouhuoren}</td>
+            <td align="center">${order.shouhuoaddress}</td>
+            <td align="center">${order.phonenumber}</td>
             <td align="center" style="line-height: 16px;">
 
-                    <span>已发货</span> <br />
+                    <span>${order.status}</span> <br />
                     <span class="cDRed">2017-11-28</span><br />
                 
             </td>
             <td align="left" style="line-height: 16px; padding: 4px;">
-                <div style="display: none">
-
-                    <div id="orderInfo_176797">
-<form action="/Mall/EditOrder" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">                            <table width="560" border="0" align="center" cellpadding="4" cellspacing="1" style="background-color: #888888; margin: auto; filter: alpha(opacity=100);">
-                                
-                                <tr>
-                                    <td width="30%" align="right" valign="top" bgcolor="#FFFFFF" style="padding-top: 6px;">订单编号：</td>
-                                    <td bgcolor="#FFFFFF" valign="top" style="text-align: left; font-weight: normal; font-size: 12px; padding: 4px 4px 0px 0px; line-height: 20px;" class="cDRed">
-                                        <div id="order_1" style="margin: 4px; overflow: scroll; overflow-x: hidden; overflow-y: auto;">2017112802405589271</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right" valign="top" nowrap="nowrap" bgcolor="#FFFFFF" style="padding-top: 6px;">收货人姓名：</td>
-                                    <td bgcolor="#FFFFFF" valign="top" style="text-align: left">
-                                        <div style="margin: 4px; overflow: scroll; overflow-x: hidden; overflow-y: auto;">
-                                            <input id="NickName" name="NickName" value="唐新平" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right" valign="top" nowrap="nowrap" bgcolor="#FFFFFF" style="padding-top: 6px;">收货地址：</td>
-                                    <td bgcolor="#FFFFFF" valign="top" style="text-align: left">
-                                        <div style="margin: 4px; overflow: scroll; overflow-x: hidden; overflow-y: auto;">
-                                            <input id="Address" name="Address" value="自提" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right" valign="top" nowrap="nowrap" bgcolor="#FFFFFF" style="padding-top: 6px;">联系电话：</td>
-                                    <td bgcolor="#FFFFFF" valign="top" style="text-align: left">
-                                        <div style="margin: 4px; overflow: scroll; overflow-x: hidden; overflow-y: auto;">
-                                            <input name="Tels" id="Tels" value="18377061863" />
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right" valign="top" nowrap="nowrap" bgcolor="#FFFFFF" style="padding-top: 6px;">备注信息：</td>
-                                    <td bgcolor="#FFFFFF" valign="top" style="text-align: left">
-                                        <div id="order_5" style="margin: 4px; overflow: scroll; overflow-x: hidden; overflow-y: auto;">370983198809161379周刚刚帮带</div>
-                                    </td>
-                                </tr>
-                                <tr id="caozuo" style="display:none" >
-                                    <td align="right" valign="top" bgcolor="#FFFFFF" style="padding-top: 6px;">操作：</td>
-                                    <td bgcolor="#FFFFFF" valign="top" style="text-align: left">
-                                        <input type="hidden" id="order_id" name="id"  value="176797" />
-                                        <input class="btn" type="submit" value="提交" />
-                                    </td>
-                                </tr>
-                            </table>
-</form>                    </div>
-                </div>
-                
-                <a href="javascript:void(0)" style="color:red"  onclick="return lookPost(176797,0)"  >[修改收货人]</a>
-                <br />
-                    <span>物流公司：1</span>  
-                    <br /> <span>物流单号：已自提</span> 
-                    <br />
-                    <span>查询地址：</span>
-                                    <a href="javascript:;" style="color:red" onclick="setGet(176797)" >[确认收货]</a>
-            </td>
-            
-        </tr>
-        <tr>
-            <input type="hidden" id="orderID_176788" value="2017112802401299990" />
-            <td align="center">2017112802<br />
-                401299990</td>
-            <td align="center">海参牡蛎颗粒片（32克/瓶）</td>
-            <td align="center">4</td>
-            <td align="center">1192.00</td>
-            <td align="center">2017-11-28</td>
-            <td align="center">唐新平</td>
-            <td align="center">自提</td>
-            <td align="center">18377061863</td>
-            <td align="center" style="line-height: 16px;">
-
-                    <span>已发货</span> <br />
-                    <span class="cDRed">2017-11-28</span><br />
-                
-            </td>
-            <td align="left" style="line-height: 16px; padding: 4px;">
+         
                 <div style="display: none">
 
                     <div id="orderInfo_176788">
@@ -424,15 +350,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <span>查询地址：</span>
                                     <a href="javascript:;" style="color:red" onclick="setGet(176788)" >[确认收货]</a>
             </td>
-            
         </tr>
+            </c:forEach>
 </table>
 <!--end box-->
 <div class="nextpage cBlack">
     <ul>
-        <li class="pageleft">共 1 页 2 条记录，当前为第 1 页</li>
+        <li class="pageleft">
+		</li>
         <li class="pageright">
-
+			<a href="conditioncommodityPageQuery?start=1&pageSize=9">首页</a>
+			<a href="conditioncommodityPageQuery?start=${pager.prev}&pageSize=9">上一页</a>
+			<a href="conditioncommodityPageQuery?start=${pager.next}&pageSize=9">下一页</a>
+			<a href="conditioncommodityPageQuery?start=${pager.totalPage}&pageSize=9">尾页</a>
             <!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
             <div class="ap">
                 

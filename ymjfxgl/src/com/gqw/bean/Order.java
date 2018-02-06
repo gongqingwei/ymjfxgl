@@ -13,13 +13,15 @@ public class Order {
 	private String wuliugongsi;
 	private String wuliudanhao;
 	private String chaxunaddress;
+	private String loginid;
 	public Order() {
 		super();
 	}
+	
 	public Order(String ordernumber, String name, int numbers, float money,
 			String ordertime, String shouhuoren, String shouhuoaddress,
 			String phonenumber, String status, String wuliugongsi,
-			String wuliudanhao, String chaxunaddress) {
+			String wuliudanhao, String chaxunaddress, String loginid) {
 		super();
 		this.ordernumber = ordernumber;
 		this.name = name;
@@ -33,7 +35,17 @@ public class Order {
 		this.wuliugongsi = wuliugongsi;
 		this.wuliudanhao = wuliudanhao;
 		this.chaxunaddress = chaxunaddress;
+		this.loginid = loginid;
 	}
+
+	public String getLoginid() {
+		return loginid;
+	}
+
+	public void setLoginid(String loginid) {
+		this.loginid = loginid;
+	}
+
 	public String getOrdernumber() {
 		return ordernumber;
 	}

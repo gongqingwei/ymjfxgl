@@ -1,0 +1,21 @@
+package com.gqw.service.fenhong;
+
+import java.util.List;
+
+import com.gqw.bean.JifendianzibiOrder;
+import com.gqw.bean.Order;
+
+public class FenhongServiceImpl implements FenhongService {
+
+	public List<Order> conditionPageOrder(int start, int pageSize,
+			String loginId, String ordernumber, String date1, String date2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public Boolean insertJifendianzibi(JifendianzibiOrder jifendianzibiOrder) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

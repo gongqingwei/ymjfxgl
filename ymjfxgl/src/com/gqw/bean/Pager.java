@@ -1,5 +1,9 @@
 package com.gqw.bean;
-
+/**
+ * 用于商品列表分页
+ * @author Administrator
+ *
+ */
 public class Pager {
 	private int pageIndex;//当前页
 	private int totalPage;//总页数

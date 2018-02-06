@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- namespace的值一定是接口的全路径与接口绑定后,此文件相当于接口的实现类  -->
+<mapper namespace="com.gqw.dao.order.MyOrderMapper">
+<insert id="insertOrder" parameterType="com.gqw.bean.Order">
+	insert into dingdan(ordernumber,name,numbers,money,ordertime,shouhuoren,shouhuoaddress,phonenumber,status,wuliugongsi,wuliudanhao,chaxunaddress)
+	values(#{ordernumber},#{name},#{numbers},#{money},#{ordertime},#{shouhuoren},#{shouhuoaddress},#{phonenumber},#{status},#{wuliugongsi},#{wuliudanhao},#{chaxunaddress});		
+</insert>
+<select id="conditionPageOrder" parameterType="string" resultType="Order">
+	select * from order where 1=1
+	<if test="ordernumber!=null">
+		and ordernumber=#{ordernumber}
+	</if>
+	<if test="status!=null">
+		and status=#{status}
+	</if>
+	<if test="date1!=null and date2!=null">
+		and ordertime between #{date1} and #{date2}
+	</if>
+	limit #{start},#{pageSize}
+</select>
+</mapper>

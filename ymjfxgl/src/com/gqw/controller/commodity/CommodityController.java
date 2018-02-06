@@ -14,6 +14,7 @@ import com.gqw.bean.Commodity;
 import com.gqw.bean.Pager;
 import com.gqw.dao.commodity.CommodityMapper;
 import com.gqw.service.CommoditiesServiceImpl;
+import com.gqw.util.PublicParameters;
 
 @Controller
 public class CommodityController {
@@ -60,6 +61,7 @@ public class CommodityController {
 	public String selectOneCommodity(Map<String,Object> map,String commodityId){
 		Commodity commodity=commoditiesServiceImpl.selectOneCommodity(commodityId);
 		map.put("commodity", commodity);
+		map.put("loginid", PublicParameters.id);
 		return "goodsDetails";
 	}
 	@RequestMapping("cpfq")

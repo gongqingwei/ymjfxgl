@@ -1,5 +1,8 @@
 package com.gqw.service.order;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +17,14 @@ public class MyOrderServiceImpl implements MyOrderService{
 	public Boolean insertOrder(Order order) {
 		// TODO Auto-generated method stub
 		return myorder.insertOrder(order);
+	}
+	public List<Order> conditionPageOrder(@Param("start")int start,@Param("pageSize")int pageSize,@Param("loginId")String loginId,@Param("ordernumber")String ordernumber,@Param("status")String status,@Param("date1")String date1,@Param("date2")String date2) {
+		// TODO Auto-generated method stub
+		return myorder.conditionPageOrder(start, pageSize, loginId, ordernumber, status, date1, date2);
+	}
+	public int countOrders() {
+		// TODO Auto-generated method stub
+		return myorder.countOrders();
 	}
 
 }

@@ -61,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="listing_box">
                 <ul class="search">
                     <li>
-<form action="/member/ReinvestedSubmit" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSetsel" method="post">                            <div class="group">
+<form action="insertFenhongOrder" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSetsel" method="post">                            <div class="group">
                                 
                                     <label class="label">电子币：0.0000</label> 
                                     <label class="label">奖金币：97.2800</label> 

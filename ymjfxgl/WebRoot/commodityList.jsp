@@ -108,12 +108,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <ul>
                             <li class="pageleft">
                               <c:if test="${pager.pageIndex>1}">
-	                            <a href="conditioncommodityPageQuery?start=1&pageSize=4&proName=${proName}&ProCategory=${ProCategory}">首页</a>
-							    <a href="conditioncommodityPageQuery?start=${pager.prev}&pageSize=4&proName=${proName}&ProCategory=${ProCategory}">上一页</a>
+	                            <a href="conditioncommodityPageQuery?start=1&pageSize=9&proName=${proName}&ProCategory=${ProCategory}">首页</a>
+							    <a href="conditioncommodityPageQuery?start=${pager.prev}&pageSize=9&proName=${proName}&ProCategory=${ProCategory}">上一页</a>
 							  </c:if>
 							  <c:if test="${pager.pageIndex<pager.totalPage}">
-							    <a href="conditioncommodityPageQuery?start=${pager.next}&pageSize=4&proName=${proName}&ProCategory=${ProCategory}">下一页</a>
-							    <a href="conditioncommodityPageQuery?start=${pager.totalPage}&pageSize=4&proName=${proName}&ProCategory=${ProCategory}">尾页</a>
+							    <a href="conditioncommodityPageQuery?start=${pager.next}&pageSize=9&proName=${proName}&ProCategory=${ProCategory}">下一页</a>
+							    <a href="conditioncommodityPageQuery?start=${pager.totalPage}&pageSize=9&proName=${proName}&ProCategory=${ProCategory}">尾页</a>
 							  </c:if>
    							</li>
                             <li class="pageright">

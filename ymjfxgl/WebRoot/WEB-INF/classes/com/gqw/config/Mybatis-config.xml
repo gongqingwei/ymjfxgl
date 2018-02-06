@@ -10,5 +10,6 @@
 	<mapper resource="com/gqw/dao/LoginMapper.xml"/>
 	<mapper resource="com/gqw/dao/commodity/CommodityMapper.xml"/>
 	<mapper resource="com/gqw/dao/order/MyOrderMapper.xml"/>
+	<mapper resource="com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
 </mappers>
 </configuration>
