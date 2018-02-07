@@ -3,6 +3,7 @@ package com.gqw.service.fenhong;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,7 +13,7 @@ import com.gqw.dao.jifendianzibi.JifendianzibiMapper;
 @Service
 @Transactional
 public class FenhongServiceImpl implements FenhongService {
-	
+	@Autowired
 	private JifendianzibiMapper fenhongMapper;
 	public List<JifendianzibiOrder> conditionPageOrder(int start, int pageSize,
 			String loginId, String ordernumber, Date date1, Date date2) {

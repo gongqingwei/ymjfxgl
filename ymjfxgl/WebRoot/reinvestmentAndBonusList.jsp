@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -125,17 +126,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th align="center">时间</th>
         <th align="center">状态</th>
     </tr>
+     <c:forEach var="fenhongOrder" items="${fenhongOrders}">
         <tr>
-            <td align="center">txp88888-1</td>
-            <td align="center">txp88888</td>
-            <td align="center">3</td>
-            <td align="center">1800.00</td>
-            <td align="center">1240.62</td>
-            <td align="center">1166.19</td>
-            <td align="center">2017/11/21 20:04:31</td>
+            <td align="center">${fenhongOrder.number}</td>
+            <td align="center">${fenhongOrder.ordernumber}</td>
+            <td align="center">${fenhongOrder.futounumber}</td>
+            <td align="center">${fenhongOrder.futoumoney}</td>
+            <td align="center">${fenhongOrder.allfenhong}</td>
+            <td align="center">${fenhongOrder.truefenhong}</td>
+            <td align="center">${fenhongOrder.time}</td>
             <td align="center">分红中</td>
         </tr>
-
+	  </c:forEach>
 </table>
 <div class="nextpage cBlack">
     <ul style="">

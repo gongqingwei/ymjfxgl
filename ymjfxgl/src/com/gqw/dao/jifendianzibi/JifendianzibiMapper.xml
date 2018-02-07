@@ -6,10 +6,10 @@
 <mapper namespace="com.gqw.dao.jifendianzibi.JifendianzibiMapper">
 	<insert id="insertJifendianzibi" parameterType="JifendianzibiOrder">
 		insert into jifendianzibidingdan(number ,ordernumber ,futounumber ,futoumoney ,allfenhong ,truefenhong ,time ,status ,loginid)
-		values(#{number},#{ordernumber},#{futounumber},#{futoumoney},#{allfenhong},#{truefenhong},#{time},#{status},#{loginid},);
+		values(#{number},#{ordernumber},#{futounumber},#{futoumoney},#{allfenhong},#{truefenhong},#{time},#{status},#{loginid});
 	</insert>
 	<select id="conditionPageOrder" parameterType="string" resultType="JifendianzibiOrder">
-		select * from jifendianzibidingdan  where loginid=#{loginid}
+		select * from jifendianzibidingdan  where loginid=#{loginId}
 		<if test="ordernumber!=null and ordernumber!=''">
 			and ordernumber=#{ordernumber}
 		</if>
@@ -18,7 +18,12 @@
 		</if>
 		limit #{start},#{pageSize}
 	</select>
+	
 	<select id="selectLogin_username" parameterType="string" resultType="string">
-		select * from login where id=#{loginid}
+		select username from login where id=#{loginid}
+	</select>
+	
+	<select id="selectMycount" parameterType="int" resultType="Integral">
+		select * from integral where loginid=#{loginid}
 	</select>
 </mapper>

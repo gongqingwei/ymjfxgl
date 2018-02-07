@@ -1,0 +1,50 @@
+package com.gqw.controller.email;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.Email;
+import com.gqw.service.email.EmailServiceImpl;
+import com.gqw.util.PublicParameters;
+
+public class EmailController {
+	@Autowired
+	private EmailServiceImpl EmailServiceImpl;
+	@RequestMapping("emailList")
+	public String selectEmail(Map<String,Object> map,HttpServletRequest request,
+			int start,int pageSize,String loginId,String status,Date date1,Date date2){
+		if((Object)start==null){
+			start=1;
+			pageSize=9;
+		}
+		loginId=String.valueOf(PublicParameters.id);
+		List<Email> emails=EmailServiceImpl.receiveEmail(start, pageSize, loginId, status, date1, date2);
+		map.put("emails", emails);
+		return "emailManagent";
+	}
+	@RequestMapping("MsgSend")
+	public String fasongEmail(Map<String,Object> map ,String acp,String title,String content){
+		Email email=new Email();
+		email.setAddressee(acp);
+		email.setTitle(title);
+		email.setText(content);
+		email.setLoginid(PublicParameters.id);
+		email.setStatus("未读");
+		Date day=new Date();    
+		 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 String now=df.format(day);
+		 email.setTime(PublicParameters.StringToDate(now,"yyyy-MM-dd HH:mm:ss"));
+		EmailServiceImpl.createEmail(email);
+		map.put("email", email);
+		return "emailManagent";
+	}
+		
+	
+}

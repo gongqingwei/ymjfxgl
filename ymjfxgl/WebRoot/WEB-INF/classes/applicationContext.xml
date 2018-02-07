@@ -34,4 +34,8 @@
 	<property name="mapperInterface" value="com/gqw/dao/jifendianzibi/JifendianzibiMapper"></property>
 	<property name="sqlSessionFactory" ref="sqlSession"></property>
 </bean>
+<bean name="emailMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/email/EmailMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
 </beans>

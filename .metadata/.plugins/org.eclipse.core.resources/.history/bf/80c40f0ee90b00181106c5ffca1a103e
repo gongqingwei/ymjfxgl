@@ -1,0 +1,5 @@
+package com.gqw.dao.email;
+
+public interface EmailService {
+
+}

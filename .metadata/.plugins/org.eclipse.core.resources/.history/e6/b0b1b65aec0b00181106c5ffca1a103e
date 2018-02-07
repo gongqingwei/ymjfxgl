@@ -1,0 +1,5 @@
+package com.gqw.service.email;
+
+public interface EmailService {
+
+}

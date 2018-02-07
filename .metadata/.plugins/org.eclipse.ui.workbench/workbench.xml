@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="22" version="2.0">
+<workbench progressCount="58" version="2.0">
 <workbenchAdvisor/>
 <window height="738" maximized="true" width="1024" x="268" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="197" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="292" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -18,7 +18,7 @@
 <coolItem id="com.genuitec.myeclipse.actions.desktop" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="com.genuitec.myeclipse.actions.reporting" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="com.genuitec.myeclipse.actions.screencapture" itemType="typeToolBarContribution" x="55" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="135" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="147" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
@@ -27,6 +27,9 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.genuitec.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.jboss.tools.common.propertieseditor.PropertiesCompoundEditor" itemType="typePlaceholder" x="38" y="22"/>
+<coolItem id="org.eclipse.debug.ui.NoSourceFoundEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.genuitec.eclipse.springframework.springconfigeditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -39,7 +42,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1517644892183" focus="true" label="工作空间 － MyEclipse Java Enterprise">
+<page aggregateWorkingSetId="Aggregate for window 1517644892183" focus="true" label="工作空间 － 调试">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -54,23 +57,22 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FenhongController.java" partName="FenhongController.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/controller/fenhong/FenhongController.java" title="FenhongController.java" tooltip="ymjfxgl/src/com/gqw/controller/fenhong/FenhongController.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/controller/fenhong/FenhongController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1260" selectionTopPixel="347"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginController.java" partName="LoginController.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/controller/LoginController.java" title="LoginController.java" tooltip="ymjfxgl/src/com/gqw/controller/LoginController.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/controller/LoginController.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8896" selectionTopPixel="3345"/>
 </editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="reinvestmentAndBonusList.jsp" partName="reinvestmentAndBonusList.jsp" path="E:/www/testgit/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp" title="reinvestmentAndBonusList.jsp" tooltip="ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="main.jsp" partName="main.jsp" path="E:/www/testgit/ymjfxgl/WebRoot/main.jsp" title="main.jsp" tooltip="ymjfxgl/WebRoot/main.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/WebRoot/main.jsp"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FenhongServiceImpl.java" partName="FenhongServiceImpl.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/service/fenhong/FenhongServiceImpl.java" title="FenhongServiceImpl.java" tooltip="ymjfxgl/src/com/gqw/service/fenhong/FenhongServiceImpl.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/service/fenhong/FenhongServiceImpl.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="398" selectionTopPixel="0"/>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="personalData.jsp" partName="personalData.jsp" path="E:/www/testgit/ymjfxgl/WebRoot/personalData.jsp" title="personalData.jsp" tooltip="ymjfxgl/WebRoot/personalData.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/WebRoot/personalData.jsp"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FenhongService.java" partName="FenhongService.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/service/fenhong/FenhongService.java" title="FenhongService.java" tooltip="ymjfxgl/src/com/gqw/service/fenhong/FenhongService.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/service/fenhong/FenhongService.java"/>
-<editorState selectionHorizontalPixel="379" selectionLength="5" selectionOffset="376" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginMapper.java" partName="LoginMapper.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/dao/LoginMapper.java" title="LoginMapper.java" tooltip="ymjfxgl/src/com/gqw/dao/LoginMapper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/dao/LoginMapper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="537" selectionTopPixel="58"/>
 </editor>
-<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="JifendianzibiMapper.xml" partName="JifendianzibiMapper.xml" path="E:/www/testgit/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml" title="JifendianzibiMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
+<editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="LoginMapper.xml" partName="LoginMapper.xml" path="E:/www/testgit/ymjfxgl/src/com/gqw/dao/LoginMapper.xml" title="LoginMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/LoginMapper.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/dao/LoginMapper.xml"/>
 </editor>
 </editors>
 <views>
@@ -81,9 +83,8 @@
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="层次结构"/>
 <view id="org.eclipse.search.ui.views.SearchView" partName="搜索">
 <viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 <view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
-<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
-<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="2" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
 </viewState>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="调试">
@@ -94,27 +95,27 @@
 <isTrackingSelection value="false"/>
 </viewState>
 </view>
-<view id="org.eclipse.ui.views.TaskList" partName="任务"/>
 <view id="org.eclipse.debug.ui.VariableView" partName="变量">
 <viewState/>
 </view>
+<view id="org.eclipse.ui.views.TaskList" partName="任务"/>
 <view id="org.eclipse.ui.views.ContentOutline" partName="大纲">
 <viewState/>
 </view>
 <view id="com.skyway.compositeediting.spring.SpringView" partName="Spring"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="项目资源管理器"/>
 <view id="org.eclipse.wst.common.snippets.internal.ui.SnippetsView" partName="Snippets"/>
-<view id="com.genuitec.javascript.debug.ui.scriptView" partName="JavaScript Scripts Inspector"/>
 <view id="com.genuitec.eclipse.ast.deploy.core.serverview" partName="Servers">
 <viewState/>
 </view>
+<view id="com.genuitec.javascript.debug.ui.scriptView" partName="JavaScript Scripts Inspector"/>
 <view id="org.eclipse.ui.views.PropertySheet" partName="属性">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="问题">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="问题">
-<expanded>
-<category IMemento.internal.id="错误"/>
+<expanded>&#x0A;<category IMemento.internal.id="错误"/>
+<category IMemento.internal.id="警告"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -158,7 +159,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -296,7 +297,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.19879518" ratioLeft="264" ratioRight="1064" relationship="2" relative="cvslocation"/>
+<info part="org.eclipse.ui.editorss" ratio="0.22063252" ratioLeft="293" ratioRight="1035" relationship="2" relative="cvslocation"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@16c433e" ratio="0.75" ratioLeft="600" ratioRight="200" relationship="2" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="大纲"/>
@@ -358,7 +359,7 @@
 </mainWindow>
 </layout>
 </perspective>
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.debug.internal.ui.DebugPerspectiveFactory" id="org.eclipse.debug.ui.DebugPerspective" label="调试"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions"/>
@@ -442,16 +443,21 @@
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
 <perspective_action id="org.eclipse.wst.xml.ui.perspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.TaskList"/>
-<view id="com.genuitec.javascript.debug.ui.scriptView"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.debug.ui.VariableView"/>
-<view id="org.eclipse.debug.ui.BreakpointView"/>
-<view id="org.eclipse.debug.ui.DebugView"/>
-<view id="com.genuitec.eclipse.ast.deploy.core.serverview"/>
-<view id="org.eclipse.search.ui.views.SearchView"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="org.eclipse.debug.internal.ui.ConsoleFolderView" orientation="256" selectedTabId="org.eclipse.debug.ui.DebugView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.299509"/>
+<view id="org.eclipse.ui.views.TaskList" ratio="0.3"/>
+<view id="com.genuitec.javascript.debug.ui.scriptView" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.VariableView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.BreakpointView" ratio="0.3"/>
+<view id="org.eclipse.debug.ui.DebugView" ratio="0.29787233"/>
+<view id="com.genuitec.eclipse.ast.deploy.core.serverview" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
@@ -472,16 +478,16 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.6480263" ratioLeft="394" ratioRight="214" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
-<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="控制台"/>
-<page content="org.eclipse.ui.views.TaskList" label="任务"/>
-<page content="com.genuitec.javascript.debug.ui.scriptView" label="JavaScript Scripts Inspector"/>
-<page content="org.eclipse.ui.views.ContentOutline" label="大纲"/>
-<page content="org.eclipse.debug.ui.VariableView" label="变量"/>
-<page content="org.eclipse.debug.ui.BreakpointView" label="断点"/>
-<page content="org.eclipse.debug.ui.DebugView" label="调试"/>
-<page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="Servers"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="搜索"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="com.genuitec.javascript.debug.ui.scriptView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.VariableView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<page content="com.genuitec.eclipse.ast.deploy.core.serverview" label="LabelNotFound"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.atf.mozilla.ide.ui.views.console" label="LabelNotFound"/>
@@ -490,17 +496,7 @@
 <page content="org.eclipse.jdt.debug.ui.DisplayView" label="LabelNotFound"/>
 <page content="org.eclipse.search.SearchResultView" label="LabelNotFound"/>
 <page content="org.eclipse.wst.xsl.jaxp.debug.ui.view1" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
-<part id="8"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44978166" ratioLeft="206" ratioRight="252" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
@@ -527,136 +523,132 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/controller/fenhong/FenhongController.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/secondPassword.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/service/fenhong/FenhongServiceImpl.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web-3.0.5.RELEASE.jar&lt;org.springframework.web.bind.annotation.support(HandlerMethodInvoker.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/service/fenhong/FenhongService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/controller/LoginController.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(FrameworkServlet.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/ymjfxgl/src/com/gqw/dao/commodity/CommodityMapper.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/myAccounts.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/main.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/personalData.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/dao/LoginMapper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" path="/ymjfxgl/src/com/gqw/dao/LoginMapper.xml"/>
 </editors>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="2615" y="0"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="8596" y="0"/>
 </item>
-<item historyLabel="reinvestmentAndBonusList.jsp" index="1"/>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1169" y="0"/>
+<item historyLabel="myAccounts.jsp" index="3"/>
+<item historyLabel="JifendianzibiMapper.xml" index="2"/>
+<item historyLabel="JifendianzibiMapper.java" index="1">
+<position info="not_deleted" x="985" y="0"/>
 </item>
-<item historyLabel="secondPassword.jsp" index="2"/>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1169" y="0"/>
+<item historyLabel="JifendianzibiMapper.xml" index="2"/>
+<item historyLabel="JifendianzibiMapper.java" index="1">
+<position info="not_deleted" x="1004" y="13"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1014" y="0"/>
+<item historyLabel="JifendianzibiMapper.xml" index="2"/>
+<item historyLabel="JifendianzibiMapper.java" index="1">
+<position info="not_deleted" x="1004" y="13"/>
 </item>
-<item historyLabel="FenhongServiceImpl.java" index="3">
-<position info="not_deleted" x="643" y="95"/>
+<item historyLabel="myAccounts.jsp" index="3"/>
+<item historyLabel="JifendianzibiMapper.java" index="1">
+<position info="not_deleted" x="1004" y="13"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1014" y="0"/>
+<item historyLabel="myAccounts.jsp" index="3"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="8596" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1116" y="0"/>
+<item historyLabel="main.jsp" index="4"/>
+<item historyLabel="personalData.jsp" index="5"/>
+<item historyLabel="main.jsp" index="4"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="8596" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1136" y="0"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9186" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1206" y="0"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9185" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9338" y="0"/>
+</item>
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="HandlerMethodInvoker.class" index="4"/>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.xml" index="7"/>
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1116" y="0"/>
-</item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1136" y="0"/>
-</item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1206" y="0"/>
-</item>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.xml" index="7"/>
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="FenhongServiceImpl.java" index="3">
-<position info="not_deleted" x="398" y="0"/>
-</item>
-<item historyLabel="FenhongService.java" index="5">
-<position info="not_deleted" x="464" y="11"/>
-</item>
-<item historyLabel="JifendianzibiMapper.xml" index="6"/>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="HandlerMethodInvoker.class" index="4"/>
-<item historyLabel="DispatcherServlet.class" index="7"/>
-<item historyLabel="FrameworkServlet.class" index="8"/>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.xml" index="7"/>
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="JifendianzibiMapper.xml" index="6"/>
-<item historyLabel="FenhongService.java" index="5">
-<position info="not_deleted" x="376" y="5"/>
-</item>
-<item historyLabel="JifendianzibiMapper.xml" index="6"/>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1116" y="0"/>
-</item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1136" y="0"/>
-</item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1206" y="0"/>
-</item>
-<item historyLabel="FenhongController.java" index="0">
+<item historyLabel="LoginMapper.xml" index="7"/>
+<item historyLabel="LoginMapper.java" index="6">
 <position/>
 </item>
-<item historyLabel="HandlerMethodInvoker.class" index="4"/>
-<item historyLabel="FenhongController.java" index="0">
-<position/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9252" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1260" y="0"/>
+<item historyLabel="LoginMapper.java" index="6">
+<position info="not_deleted" x="543" y="0"/>
 </item>
-<item historyLabel="JifendianzibiMapper.xml" index="6"/>
-<item historyLabel="CommodityMapper.xml" index="9"/>
-<item historyLabel="JifendianzibiMapper.xml" index="6"/>
-<item historyLabel="FenhongController.java" index="0">
-<position/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9252" y="0"/>
 </item>
-<item historyLabel="JifendianzibiMapper.xml" index="6"/>
-<item historyLabel="FenhongController.java" index="0">
-<position/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9235" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1260" y="0"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9329" y="0"/>
 </item>
-<item historyLabel="HandlerMethodInvoker.class" index="4"/>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1262" y="134"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9338" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1260" y="0"/>
+<item historyLabel="personalData.jsp" index="5"/>
+<item historyLabel="main.jsp" index="4"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9338" y="0"/>
 </item>
-<item historyLabel="FenhongController.java" index="0">
-<position/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9254" y="0"/>
 </item>
-<item active="true" historyLabel="FenhongController.java" index="0">
-<position info="not_deleted" x="1260" y="0"/>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9044" y="0"/>
+</item>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9313" y="0"/>
+</item>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9257" y="0"/>
+</item>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9254" y="0"/>
+</item>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9044" y="0"/>
+</item>
+<item historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9014" y="0"/>
+</item>
+<item historyLabel="LoginMapper.java" index="6">
+<position info="not_deleted" x="537" y="0"/>
+</item>
+<item historyLabel="LoginMapper.xml" index="7"/>
+<item active="true" historyLabel="LoginController.java" index="0">
+<position info="not_deleted" x="9254" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -667,15 +659,11 @@
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="bottomleft"/>
 <trimItem IMemento.internal.id="topleft"/>
-<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@16c433e"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@b2d28b"/>
-<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ConsoleFolderView"/>
-<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ToolsFolderView"/>
-<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.OutlineFolderView"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -684,55 +672,55 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
+<trimItem IMemento.internal.id="org.eclipse.debug.internal.ui.ConsoleFolderView"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HandlerMethodInvoker.class" tooltip="org.springframework.web.bind.annotation.support.HandlerMethodInvoker">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web-3.0.5.RELEASE.jar&lt;org.springframework.web.bind.annotation.support(HandlerMethodInvoker.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="LoginMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/LoginMapper.xml">
+<persistable path="/ymjfxgl/src/com/gqw/dao/LoginMapper.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="CommodityMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/commodity/CommodityMapper.xml">
-<persistable path="/ymjfxgl/src/com/gqw/dao/commodity/CommodityMapper.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginMapper.java" tooltip="ymjfxgl/src/com/gqw/dao/LoginMapper.java">
+<persistable path="/ymjfxgl/src/com/gqw/dao/LoginMapper.java"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="FrameworkServlet.class" tooltip="org.springframework.web.servlet.FrameworkServlet">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(FrameworkServlet.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="personalData.jsp" tooltip="ymjfxgl/WebRoot/personalData.jsp">
+<persistable path="/ymjfxgl/WebRoot/personalData.jsp"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DispatcherServlet.class" tooltip="org.springframework.web.servlet.DispatcherServlet">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="main.jsp" tooltip="ymjfxgl/WebRoot/main.jsp">
+<persistable path="/ymjfxgl/WebRoot/main.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Integral.java" tooltip="ymjfxgl/src/com/gqw/bean/Integral.java">
+<persistable path="/ymjfxgl/src/com/gqw/bean/Integral.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="myAccounts.jsp" tooltip="ymjfxgl/WebRoot/myAccounts.jsp">
+<persistable path="/ymjfxgl/WebRoot/myAccounts.jsp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="JifendianzibiMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml">
 <persistable path="/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FenhongService.java" tooltip="ymjfxgl/src/com/gqw/service/fenhong/FenhongService.java">
-<persistable path="/ymjfxgl/src/com/gqw/service/fenhong/FenhongService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FenhongServiceImpl.java" tooltip="ymjfxgl/src/com/gqw/service/fenhong/FenhongServiceImpl.java">
-<persistable path="/ymjfxgl/src/com/gqw/service/fenhong/FenhongServiceImpl.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="secondPassword.jsp" tooltip="ymjfxgl/WebRoot/secondPassword.jsp">
-<persistable path="/ymjfxgl/WebRoot/secondPassword.jsp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyOrderController.java" tooltip="ymjfxgl/src/com/gqw/controller/myorder/MyOrderController.java">
-<persistable path="/ymjfxgl/src/com/gqw/controller/myorder/MyOrderController.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PublicParameters.java" tooltip="ymjfxgl/src/com/gqw/util/PublicParameters.java">
-<persistable path="/ymjfxgl/src/com/gqw/util/PublicParameters.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="MyOrderMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.xml">
-<persistable path="/ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="LoginMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/LoginMapper.xml">
-<persistable path="/ymjfxgl/src/com/gqw/dao/LoginMapper.xml"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JifendianzibiMapper.java" tooltip="ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.java">
 <persistable path="/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JifendianzibiOrder.java" tooltip="ymjfxgl/src/com/gqw/bean/JifendianzibiOrder.java">
+<persistable path="/ymjfxgl/src/com/gqw/bean/JifendianzibiOrder.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="LoginController.java" tooltip="ymjfxgl/src/com/gqw/controller/LoginController.java">
 <persistable path="/ymjfxgl/src/com/gqw/controller/LoginController.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="reinvestmentAndBonusList.jsp" tooltip="ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp">
-<persistable path="/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmailMapper.java" tooltip="ymjfxgl/src/com/gqw/dao/email/EmailMapper.java">
+<persistable path="/ymjfxgl/src/com/gqw/dao/email/EmailMapper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmailController.java" tooltip="ymjfxgl/src/com/gqw/controller/email/EmailController.java">
+<persistable path="/ymjfxgl/src/com/gqw/controller/email/EmailController.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Email.java" tooltip="ymjfxgl/src/com/gqw/bean/Email.java">
+<persistable path="/ymjfxgl/src/com/gqw/bean/Email.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmailServiceImpl.java" tooltip="ymjfxgl/src/com/gqw/service/email/EmailServiceImpl.java">
+<persistable path="/ymjfxgl/src/com/gqw/service/email/EmailServiceImpl.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EmailService.java" tooltip="ymjfxgl/src/com/gqw/service/email/EmailService.java">
+<persistable path="/ymjfxgl/src/com/gqw/service/email/EmailService.java"/>
 </file>
 </mruList>
 </workbench>

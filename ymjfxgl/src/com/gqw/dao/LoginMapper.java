@@ -6,7 +6,7 @@ import com.gqw.bean.User;
 
 public interface LoginMapper {
 	/**
-	 * ²éÑ¯
+	 * ï¿½ï¿½Ñ¯
 	 * @param username
 	 * @param password
 	 * @param pwd
@@ -16,9 +16,11 @@ public interface LoginMapper {
 	public User login(@Param("username")String username,@Param("password")String password,@Param("pwd")String pwd,@Param("thirdpwd")String thirdpwd);
 	
 	/**
-	 * ²åÈëÒ»Ìõ¶©µ¥
+	 * ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 * @param user
 	 * @return
 	 */
 	public Boolean insertOrder(User user);
+	
+	public User personalMessage(@Param("id")int id);
 }

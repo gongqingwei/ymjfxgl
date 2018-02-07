@@ -79,10 +79,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <!--资料box-->
         <div class="data_box">
-<form action="/UserInfo" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="t2">
+<form action="update" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="t2">
                     <tr>
                         <td class="leftTD" height="30" align="right">订单编号：</td>
-                        <td>txp88888</td>
+                        <td>${user.username}</td>
                     </tr>
 
                     
@@ -94,13 +94,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <tr>
                         <td height="30" align="right">推荐人：</td>
                         <td>
-                            永盛
+                             ${user.tuijianrennumber}
                         </td>
                     </tr>
                     <tr>
                         <td height="30" align="right">报单中心：</td>
                         <td>
-                            lhb88888
+                            ${user.baodancenternumber}
                         </td>
                     </tr>
                     <tr style="display: none">
@@ -120,13 +120,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <tr>
                         <td height="30" align="right">真实姓名：</td>
                         <td>
-                            <input name="userName" type="text" readonly  value="唐新平" size="30" maxlength="50" style="width: 200px; height: 20px;" />
+                            <input name="userName" type="text" readonly  value="${user.truename}" size="30" maxlength="50" style="width: 200px; height: 20px;" />
                             <span class="cRed">*</span></td>
                     </tr>
                     <tr>
                         <td height="30" align="right">身份证号：</td>
                         <td>
-                            <input name="userCode" type="text"  value="622724198509211517" size="30" maxlength="18" style="width: 140px; height: 20px;" />
+                            <input name="userCode" type="text"  value="${user.shenfenzhengnumber}" size="30" maxlength="18" style="width: 140px; height: 20px;" />
                             <span class="cRed">*</span></td>
                     </tr>
                     <tr>
@@ -318,7 +318,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <option value="00688"   >+00688 (图瓦卢)</option>
 
                             </select>
-                            <input name="userTels" id="userTels" type="text"  value="18377061863" size="30" maxlength="13" style="width: 140px; height: 20px;" />
+                            <input name="userTels" id="userTels" type="text"  value="${user.phonenumber}" size="30" maxlength="13" style="width: 140px; height: 20px;" />
                             
                             <span class="cRed">*</span><span id="dTip4" class="cRed">&nbsp;</span></td>
                     </tr>
@@ -328,9 +328,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <td height="30" align="right">银行信息：</td>
                         <td>
                                 <select name="BankName">
-                                    <option value="">请选择开户银行</option>
+                                    <option value="">${user.bankmessage}</option>
                                         <option value="中国银行" >中国银行</option>
-                                        <option value="农业银行" selected=selected>
+                                        <option value="农业银行" >
 农业银行</option>
                                         <option value="建设银行" >
 建设银行</option>
@@ -341,22 +341,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 </select>
 
 
-                            <input name="bankBranch"   type="text" size="10" maxlength="25" style="width: 150px;" class="btnClass_s" value="防城港市港口区友谊路支行">
+                            <input name="bankBranch"   type="text" size="10" maxlength="25" style="width: 150px;" class="btnClass_s" value="${user.bankzhihang }">
                             支行
-               <input name="bankAddress" type="text"   size="10" maxlength="25" style="width: 150px;" class="btnClass_s" value="">
+               <input name="bankAddress" type="text"   size="10" maxlength="25" style="width: 150px;" class="btnClass_s" value="${user.bankfenlichu }">
                             分理处
                                         <span class="cRed">*</span></td>
                     </tr>
                     <tr>
                         <td height="30" align="right">开户姓名：</td>
                         <td>
-                            <input name="BankUser" type="text" readonly value="唐新平" size="30"  style="width: 200px; height: 20px;" />
+                            <input name="BankUser" type="text" readonly value="${user.kaihuname}" size="30"  style="width: 200px; height: 20px;" />
                             <span class="cRed">*</span></td>
                     </tr>
                     <tr>
                         <td height="30" align="right">银行卡号：</td>
                         <td>
-                            <input name="BankCard" type="text"  value="6228482828737136871" size="30" maxlength="19" style="width: 300px; height: 20px;" />
+                            <input name="BankCard" type="text"  value="${user.banknumber }" size="30" maxlength="19" style="width: 300px; height: 20px;" />
                             <span class="cRed">*</span></td>
                     </tr>
                     

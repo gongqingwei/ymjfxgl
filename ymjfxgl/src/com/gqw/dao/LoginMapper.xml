@@ -17,6 +17,8 @@
 	insert into login(username,password,identity,seondpassword,thirdpassword,rengounumber,tuijianrennumber,baodancenternumber,truename,phonenumber,shenfenzhengnumber,adress,bankmessage,bankzhihang,bankfenlichu,kaihuname,banknumber)
 	values(#{username},#{password},#{password},#{seondpassword},#{thirdpassword},#{rengounumber},#{tuijianrennumber},#{tuijianrennumber},#{truename},#{phonenumber},#{shenfenzhengnumber},#{adress},#{bankmessage},#{bankzhihang},#{bankfenlichu},#{kaihuname},#{banknumber});
 </insert>
-
+<select id="personalMessage" parameterType="int" resultType="User">
+	select * from login where id=#{id}
+</select>
 </mapper>
 

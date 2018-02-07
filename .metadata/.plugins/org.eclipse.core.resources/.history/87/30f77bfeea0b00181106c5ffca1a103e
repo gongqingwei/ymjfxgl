@@ -1,0 +1,12 @@
+package com.gqw.dao.email;
+
+import com.gqw.bean.Email;
+
+public interface EmailMapper {
+	/**
+	 * 插入一条数据
+	 * @param email
+	 * @return
+	 */
+	public Boolean createEmail(Email email);
+}

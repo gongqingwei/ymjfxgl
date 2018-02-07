@@ -22,18 +22,22 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.Integral;
 import com.gqw.bean.User;
 import com.gqw.dao.LoginMapper;
+import com.gqw.dao.jifendianzibi.JifendianzibiMapper;
 import com.gqw.util.PublicParameters;
 
 @Controller
 public class LoginController {
 	private String code;
-//	private static String myUsername;
-//	private static String myPassword;
+
 	
 	@Autowired
 	private LoginMapper loginMapper;
+	@Autowired
+	private JifendianzibiMapper jifendianzibiMapper;
 	@RequestMapping("login")
 	public String isLogin(Map map,String username,String password,String user_input_verifyCode,String pwd,String thirdpwd){
 		User user=loginMapper.login(username,password,pwd,thirdpwd);
@@ -221,9 +225,12 @@ public class LoginController {
 		 }
 	 }
 	 @RequestMapping("myAccounts")
-	 public String yanzhengmyAccounts(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+	 public String yanzhengmyAccounts(Map<String,Object> map, HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
 		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
+			 Integral account=jifendianzibiMapper.selectMycount(String.valueOf(PublicParameters.id));
+			 map.put("account", account);
+			 map.put("user", user);
 			 return "myAccounts";
 		 }else{
 			 request.setAttribute("jspName", "myAccounts");
@@ -239,5 +246,11 @@ public class LoginController {
 			 request.setAttribute("jspName", "changePassword");
 			 return "thirdPassword"; 
 		 }
+	 }
+	 @RequestMapping("personalData")
+	 public String personalData(Map<String,Object> map,User user){
+		 user=loginMapper.personalMessage(PublicParameters.id);
+		 map.put("user", user);
+		 return "personalData";
 	 }
 }

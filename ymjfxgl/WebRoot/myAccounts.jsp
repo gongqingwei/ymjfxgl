@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@page import="com.gqw.util.PublicParameters"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -12,10 +13,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>我的账户</title>
     <link href="style/css/css/index.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="style/css/font-awesome.min.css">
-    <script src="style/js/jquery-1.10.1.min.js"></script>
-    <script src="style/js/all.js"></script>
+    <script src="/style/js/jquery-1.10.1.min.js"></script>
+    <script src="/style/js/all.js"></script>
     <!--6.8-->
-    <link rel="stylesheet" type="text/css" href="style/css/pipei.css">
+    <link rel="stylesheet" type="text/css" href="/style/css/pipei.css">
     <script type="text/javascript">
         $(document).ready(function () {
             $(".btn-details").click(function () {
@@ -61,38 +62,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <ul class="index_contentData">
                     <li style="border-top: 1px solid #dddddd;">
                         <p>帐户编号</p>
-                        <span>txp88888</span>
+                        <span>${user.username}</span>
                         <p>昵称</p>
-                        <span>唐新平</span></li>
+                        <span>${user.truename}</span></li>
                         <li>
                             <p>销售总业绩</p>
-                            <span>3000.00 </span>
+                            <span>${account.xiaoshouzongyeji} </span>
                             <p>直接销售量</p>
-                            <span>3</span></li>
+                            <span>${account.zhijiexiaoshouliang}</span></li>
                         <li>
                             <p>左区业绩</p>
-                            <span>3</span>
+                            <span>${account.leftyeji}</span>
                             <p>右区业绩</p>
-                            <span>2</span></li>
+                            <span>${account.rightyeji}</span></li>
                     
                     <li>
                         <p>总分红包</p>
-                        <span>3</span>
+                        <span>${account.zongfenhongbao}</span>
                         <p>出局分红包</p>
-                        <span>0</span></li>
+                        <span>${account.chujufenhongbao}</span></li>
                     <li>
                         <p>未出局分红包</p>
-                        <span>3</span>
+                        <span>${account.weichujufenhongbao}</span>
                         <p>电子币余额</p>
-                        <span><i class="icon-money" style="color: green;"></i>0.00</span></li>
+                        <span><i class="icon-money" style="color: green;"></i>${account.dianzibi}</span></li>
                     <li>
                         <p>种子币余额</p>
-                        <span><i class="icon-money" style="color: green;"></i>598.16</span>
+                        <span><i class="icon-money" style="color: green;"></i>${account.zhongzibi}</span>
                         <p>购物积分余额</p>
-                        <span><i class="icon-money" style="color: green;"></i>12.00</span></li>
+                        <span><i class="icon-money" style="color: green;"></i>${account.shopjifen}</span></li>
                     <li>
                         <p>奖金余额</p>
-                        <span><i class="icon-money" style="color: green;"></i>97.28</span>
+                        <span><i class="icon-money" style="color: green;"></i>${account.jiangjinbi}</span>
 
                         <p>推广链接：</p>
                         <span><a href="javascript:;" data-clipboard-target="nr" id="fz">点击复制</a></span>
@@ -113,7 +114,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                     <li>
                         <p>荣誉等级</p>
-                        <span>普通订单</span>
+                        <span>${account.rongyulevel}</span>
                         <p>下一级别：</p>
                         <span>主任</span>
                     </li>

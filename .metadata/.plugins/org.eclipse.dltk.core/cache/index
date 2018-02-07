@@ -124,11 +124,8 @@
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/changePassword.jsp" timestamp="1517650904020" lastAccessTime="1517888337612"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/checkBonusDetails.jsp" timestamp="1517831221273" lastAccessTime="1517888337752"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/commodityList.jsp" timestamp="1517888023380" lastAccessTime="1517888337939"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/emailManagent.jsp" timestamp="1517650904036" lastAccessTime="1517888338064"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/financeStatistics.jsp" timestamp="1517650904036" lastAccessTime="1517888338220"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/index.jsp" timestamp="1517732429622" lastAccessTime="1517888338501"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/myAccounts.jsp" timestamp="1517840025872" lastAccessTime="1517888338922"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/personalData.jsp" timestamp="1517650904051" lastAccessTime="1517888339360"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/WdatePicker.js" timestamp="1517646941711" lastAccessTime="1517888340234"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/ZeroClipboard.min.js" timestamp="1517646941711" lastAccessTime="1517888340375"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/all.js" timestamp="1517646941680" lastAccessTime="1517888340515"/>
@@ -140,8 +137,11 @@
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/jquery-1.7.1.min.js" timestamp="1517646941695" lastAccessTime="1517888346601"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/registeredOrder.jsp" timestamp="1517909556105" lastAccessTime="1517909556667"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/goodsDetails.jsp" timestamp="1517917469053" lastAccessTime="1517917469630"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/main.jsp" timestamp="1517917996675" lastAccessTime="1517917997242"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/myOrder.jsp" timestamp="1517918318235" lastAccessTime="1517918318827"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp" timestamp="1517925964065" lastAccessTime="1517925964623"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/secondPassword.jsp" timestamp="1517926300797" lastAccessTime="1517926301359"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp" timestamp="1517987409019" lastAccessTime="1517987409929"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/emailManagent.jsp" timestamp="1518011195661" lastAccessTime="1518011196238"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/myAccounts.jsp" timestamp="1518018684612" lastAccessTime="1518018685221"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/personalData.jsp" timestamp="1518019772112" lastAccessTime="1518019772721"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/main.jsp" timestamp="1518019776761" lastAccessTime="1518019777276"/>
 </cache:CacheIndex>

@@ -1,12 +1,14 @@
 package com.gqw.controller.fenhong;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,8 +33,9 @@ public class FenhongController {
 				 pageSize=9;
 			 }
 			 loginId=String.valueOf(PublicParameters.id);
-			 
-			 List<JifendianzibiOrder> fenhongOrders=fenhongServiceImpl.conditionPageOrder(start, pageSize, loginId, ordernumber, date1, date2);
+			
+			 List<JifendianzibiOrder> fenhongOrders=new ArrayList<JifendianzibiOrder>();
+			 fenhongOrders= fenhongServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize, loginId, ordernumber, date1, date2);
 			 map.put("ordernumber", fenhongServiceImpl.selectLogin_username(loginId));
 			 map.put("fenhongOrders", fenhongOrders);
 			 return "reinvestmentAndBonusList";
@@ -55,10 +58,11 @@ public class FenhongController {
 		 fenhongOrder.setFutoumoney(100*num);
 		 fenhongOrder.setAllfenhong(100*num);
 		 fenhongOrder.setTruefenhong(90*num);
-//		 Date day=new Date();    
-//		 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-//		 String now=df.format(day);
-		 fenhongOrder.setTime(new Date());
+		 fenhongOrder.setLoginid(PublicParameters.id);
+		 Date day=new Date();    
+		 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 String now=df.format(day);
+		 fenhongOrder.setTime(PublicParameters.StringToDate(now,"yyyy-MM-dd HH:mm:ss"));
 		 fenhongOrder.setStatus("分红中");
 		 Boolean bool=fenhongServiceImpl.insertJifendianzibi(fenhongOrder);
 		 return "reinvestmentAndBonusList";

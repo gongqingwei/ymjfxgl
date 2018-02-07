@@ -138,9 +138,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </li>
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">个人信息 <span class="label-en">system</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-				  <li><a href="emailManagent.jsp" target="iframemain">邮件管理 <span class="label-en"></span></a></li>
+				  <li><a href="emailList?start=1&pageSize=9" target="iframemain">邮件管理 <span class="label-en"></span></a></li>
                   <li><a href="secondPassword.jsp?jspName=myAccounts" target="iframemain">我的账户 <span class="label-en"></span></a></li>
-                  <li><a href="personalData.jsp" target="iframemain">个人资料 <span class="label-en"></span></a></li>
+                  <li><a href="personalData" target="iframemain">个人资料 <span class="label-en"></span></a></li>
                   <li><a href="thirdPassword.jsp?jspName=changePassword" target="iframemain">修改密码 <span class="label-en"></span></a></li>
 			   </ul>
             </li>

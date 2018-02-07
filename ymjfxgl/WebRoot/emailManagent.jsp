@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@page import="com.gqw.util.PublicParameters"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://"
@@ -61,7 +63,8 @@ function AfterAdd(result) {
 		alert("发送成功！");
 		window.location.reload();
 	} else {
-		alert(result);
+		
+		window.location.reload();
 	}
 }
 function MsgDel(Obj) {
@@ -116,7 +119,7 @@ function MsgDel(Obj) {
 
 
 				<div class="listing_box">
-					<form action="/Msg/MsgSend" data-ajax="true"
+					<form action="MsgSend" data-ajax="true"
 						data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet"
 						method="post">
 						<ul class="search">
@@ -229,11 +232,18 @@ function MsgDel(Obj) {
 									操作
 								</th>
 							</tr>
+								<c:forEach var="email" items="${emails}">
 							<tr>
-								<td colspan="10" align="center">
-									抱歉,目前数据库中暂无记录显示!
-								</td>
+									
+									<th>${email.fasongzhe}</th>
+									<th>${email.title}</th>
+									<th>${email.text}</th>
+									<th>${email.addressee}</th>
+									<th>${email.status}</th>
+									<th>${email.time}</th>
+									<th>操作</th>
 							</tr>
+								</c:forEach>
 
 						</table>
 						<div class="nextpage cBlack">
