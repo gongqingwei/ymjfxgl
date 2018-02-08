@@ -46,8 +46,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         <!--当前位置-->
         <ul class="location">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">商品列表</a></li>
+            <li><a href="javascript:void(0)">Home</a></li>
+            <li><a href="javascript:void(0)">商品列表</a></li>
         </ul>
         <!--banner图-->
         <div class="main_visual">

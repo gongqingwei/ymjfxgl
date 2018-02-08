@@ -39,9 +39,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 type : 'post',  
                 url : "login",  
                 data:{verifyCode:user_input_verifyCode},  
-                //dataType : "json",  
+                /*dataType : "json",*/
                 success : function(data) {    
                       
+                      document.getElementById("frmSet").submit();
                 },  
                 error : function() {  
                     alert("查询失败");  
@@ -67,7 +68,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
 
-<form action="login"  id="frmSet" method="post">        
+<form action="login"   id="frmSet" method="post">        
 <div class="login">
     <h2><img src="style/images/indexlogo.png">订单登录</h2>
             <ul>
@@ -92,7 +93,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                 </li>
                 <li class="tj">
-                    <input type="submit" value="提 交" class="login_btn">
+                    <input type="button" value="提 交" class="login_btn" onclick="login_btn();">
                 </li>
             </ul>
             <div class="foot_container">

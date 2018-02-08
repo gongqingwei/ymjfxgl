@@ -6,8 +6,14 @@ import java.awt.Graphics2D;
 import java.awt.font.FontRenderContext;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
 import java.util.Map;
 import java.util.Random;
 
@@ -22,6 +28,7 @@ import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.xml.sax.InputSource;
 
 import com.gqw.bean.Integral;
 import com.gqw.bean.User;
@@ -39,16 +46,17 @@ public class LoginController {
 	@Autowired
 	private JifendianzibiMapper jifendianzibiMapper;
 	@RequestMapping("login")
-	public String isLogin(Map map,String username,String password,String user_input_verifyCode,String pwd,String thirdpwd){
+	public String isLogin(HttpServletRequest request,HttpServletResponse response,Map map,String username,String password,String user_input_verifyCode,String pwd,String thirdpwd){
 		User user=loginMapper.login(username,password,pwd,thirdpwd);
 		if(user==null){
-			System.out.println("�û�������������");
+			System.out.println("user is null");
 			return "index";
 		}else if(code==null){
-			System.out.println("��֤��δ���");
+			System.out.println("code is null");
 			return "index";
 		}else if(!code.equals(user_input_verifyCode)){
-			System.out.println("��֤�����");
+			System.out.println("code is error");
+			
 			return "index";
 		}else{
 			PublicParameters.id=Integer.parseInt(user.getId());
@@ -60,51 +68,51 @@ public class LoginController {
 			if(user.getThirdpassword()!=null){
 				PublicParameters.thirdpassword=user.getThirdpassword();
 			}
-			if((Object)user.getRengounumber()!=null){
-				PublicParameters.rengounumber=user.getRengounumber();
-			}
-			if((Object)user.getRengounumber()!=null){
-				PublicParameters.rengounumber=user.getRengounumber();
-			}
-			if(user.getTuijianrennumber()!=null){
-				PublicParameters.tuijianrennumber=user.getTuijianrennumber();
-			}
-			if(user.getBaodancenternumber()!=null){
-				PublicParameters.baodancenternumber=user.getBaodancenternumber();
-			}
-			if(user.getTruename()!=null){
-				PublicParameters.truename=user.getTruename();
-			}
-			if(user.getPhonenumber()!=null){
-				PublicParameters.phonenumber=user.getPhonenumber();
-			}
-			if(user.getShenfenzhengnumber()!=null){
-				PublicParameters.shenfenzhengnumber=user.getShenfenzhengnumber();
-			}
-			if(user.getAdress()!=null){
-				PublicParameters.adress=user.getAdress();
-			}
-			if(user.getBankmessage()!=null){
-				PublicParameters.bankmessage=user.getBankmessage();
-			}
-			if(user.getBankzhihang()!=null){
-				PublicParameters.bankzhihang=user.getBankzhihang();
-			}
-			if(user.getBankfenlichu()!=null){
-				PublicParameters.bankfenlichu=user.getBankfenlichu();
-			}
-			if(user.getKaihuname()!=null){
-				PublicParameters.kaihuname=user.getKaihuname();
-			}
-			if(user.getBanknumber()!=null){
-				PublicParameters.banknumber=user.getBanknumber();
-			}
-			if((Object)user.getIdentity()!=null){
-				PublicParameters.identity=user.getIdentity();
-			}
+//			if((Object)user.getRengounumber()!=null){
+//				PublicParameters.rengounumber=user.getRengounumber();
+//			}
+//			if((Object)user.getRengounumber()!=null){
+//				PublicParameters.rengounumber=user.getRengounumber();
+//			}
+//			if(user.getTuijianrennumber()!=null){
+//				PublicParameters.tuijianrennumber=user.getTuijianrennumber();
+//			}
+//			if(user.getBaodancenternumber()!=null){
+//				PublicParameters.baodancenternumber=user.getBaodancenternumber();
+//			}
+//			if(user.getTruename()!=null){
+//				PublicParameters.truename=user.getTruename();
+//			}
+//			if(user.getPhonenumber()!=null){
+//				PublicParameters.phonenumber=user.getPhonenumber();
+//			}
+//			if(user.getShenfenzhengnumber()!=null){
+//				PublicParameters.shenfenzhengnumber=user.getShenfenzhengnumber();
+//			}
+//			if(user.getAdress()!=null){
+//				PublicParameters.adress=user.getAdress();
+//			}
+//			if(user.getBankmessage()!=null){
+//				PublicParameters.bankmessage=user.getBankmessage();
+//			}
+//			if(user.getBankzhihang()!=null){
+//				PublicParameters.bankzhihang=user.getBankzhihang();
+//			}
+//			if(user.getBankfenlichu()!=null){
+//				PublicParameters.bankfenlichu=user.getBankfenlichu();
+//			}
+//			if(user.getKaihuname()!=null){
+//				PublicParameters.kaihuname=user.getKaihuname();
+//			}
+//			if(user.getBanknumber()!=null){
+//				PublicParameters.banknumber=user.getBanknumber();
+//			}
+//			if((Object)user.getIdentity()!=null){
+//				PublicParameters.identity=user.getIdentity();
+//			}
 			map.put("user", user);
 			System.out.println("user:"+user.getUsername());
-			System.out.println("��ֵ��"+username);
+			System.out.println("password:"+username);
 			user_input_verifyCode="";
 			code="";
 			return "main";
@@ -134,7 +142,7 @@ public class LoginController {
 		
 		Boolean bool=loginMapper.insertOrder(user);
 		if(bool){
-			System.out.println("������ݳɹ�");
+			System.out.println("success");
 			return "commodityList";
 		}else{
 			return "registeredOrder";
@@ -190,7 +198,7 @@ public class LoginController {
 	    }  
 	 private char randomChar() {  
 	        Random r = new Random();  
-	        String s = "ABCDEFGHJKLMNPRSTUVWXYZ0123456789";  
+	        String s = "0123456789";  
 	        return s.charAt(r.nextInt(s.length()));  
 	    } 
 	

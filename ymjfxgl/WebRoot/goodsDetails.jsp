@@ -145,17 +145,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <h2>商品描述</h2>
       </div>
       <div class="details-box">
-        <p><span style="font-family:SimHei;line-height:1.5;font-size:14px;">〖产品名称〗 茵曼金螺旋藻颗粒 &nbsp;</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖产品类型〗水产制品</span></p>
-        <p><span style="line-height:1.5;font-family:SimHei;font-size:14px;">〖规 &nbsp; &nbsp;格〗 0.2克/片×200片/瓶</span></p>
-        <p><span style="line-height:1.5;font-family:SimHei;"><span style="font-size:14px;">〖净&nbsp;含&nbsp;量〗 40克/瓶</span><br/></span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖产品标准〗 Q/YMJ0001S-2015</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖许可证号〗 QS450122020031</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖贮藏条件〗 密封、置阴、干燥</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖保 质 期〗 18个月</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖食用方法〗 每次8-10粒，餐前服用， 温水送服。</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">〖注意事项〗 瓶盖打开后及时盖上，以免氧化，影响保质。</span></p>
-        <p><span style="font-family:SimHei;font-size:14px;">&nbsp;本品为圆形粒状，儿童应在成人监护下服用。（本品不代替药品）</span></p>
+        <p><span style="font-family:SimHei;line-height:1.5;font-size:14px;">〖产品名称〗 ${commodity.name} &nbsp;</span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖产品类型〗${commodity.type}</span></p>
+        <p><span style="line-height:1.5;font-family:SimHei;font-size:14px;">〖规 &nbsp; &nbsp;格〗 ${commodity.guige}</span></p>
+        <p><span style="line-height:1.5;font-family:SimHei;"><span style="font-size:14px;">〖净&nbsp;含&nbsp;量〗 ${commodity.jinghanliang}</span><br/></span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖产品标准〗 ${commodity.biaozhun}</span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖许可证号〗 ${commodity.xukezheng}</span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖贮藏条件〗 ${commodity.chucangtiaojian}</span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖保 质 期〗 ${commodity.baozhiqi}</span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖食用方法〗${commodity.shiyongfangfa}</span></p>
+        <p><span style="font-family:SimHei;font-size:14px;">〖注意事项〗 ${commodity.zhiyishixiang}</span></p>
         <p><br/></p>
       </div>
       <!--商品描述end--> 
@@ -204,7 +203,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    <tr><td height="30" align="center" bgcolor="#FFFFFF">
           <input type="hidden" name="num" id="num" value="0" />
           <input type="hidden" name="id" value="3" />
-          <input name="" type="submit" class="searchbtn" value="提交订单" onclick=""/>
+          <input name="" type="submit" class="searchbtn" value="提交订单" onclick="closeInfo()"/>
           <input name="" type="button" class="searchbtn" value="取 消" onclick="closeInfo()" />
        </td>
    </tr>
