@@ -1,11 +1,13 @@
 package com.gqw.bean;
 
+import java.util.Date;
+
 public class Order {
 	private String ordernumber;
 	private String name;
 	private int numbers;
 	private float money;
-	private String ordertime;
+	private Date ordertime;
 	private String shouhuoren;
 	private String shouhuoaddress;
 	private String phonenumber;
@@ -19,7 +21,7 @@ public class Order {
 	}
 	
 	public Order(String ordernumber, String name, int numbers, float money,
-			String ordertime, String shouhuoren, String shouhuoaddress,
+			Date ordertime, String shouhuoren, String shouhuoaddress,
 			String phonenumber, String status, String wuliugongsi,
 			String wuliudanhao, String chaxunaddress, String loginid) {
 		super();
@@ -70,10 +72,10 @@ public class Order {
 	public void setMoney(float money) {
 		this.money = money;
 	}
-	public String getOrdertime() {
+	public Date getOrdertime() {
 		return ordertime;
 	}
-	public void setOrdertime(String ordertime) {
+	public void setOrdertime(Date ordertime) {
 		this.ordertime = ordertime;
 	}
 	public String getShouhuoren() {

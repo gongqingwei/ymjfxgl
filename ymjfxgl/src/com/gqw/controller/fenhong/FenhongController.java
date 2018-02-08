@@ -25,7 +25,9 @@ public class FenhongController {
 	@Autowired
 	private LoginMapper loginMapper;
 	 @RequestMapping("reinvestmentAndBonusList")
-	 public String yanzhengreinvestmentAndBonusList(Map<String,Object> map,HttpServletRequest request,String username,String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,String ordernumber,Date date1,Date date2){
+	 public String yanzhengreinvestmentAndBonusList(Map<String,Object> map,HttpServletRequest request,String username,
+			 String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,String ordernumber,
+			 Date date1,Date date2){
 		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 if((Object)start==null){

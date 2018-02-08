@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -12,10 +13,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <meta name="viewport" content="width=device-width" />
     <title>升级管理</title>
     <link href="style/css/StyleSheet.css" rel="stylesheet" />
-    <script src="style/js/WdatePicker.js"></script>
+    
     <script src="style/js/jquery-1.7.1.min.js"></script>
     <script src="style/js/jquery.unobtrusive-ajax.min.js"></script>
     <script src="style/j/layer.js"></script>
+    <script src="style/js/WdatePicker/WdatePicker.js"></script>
 <script type="text/javascript" src="/WebResource.axd?d=zUbwwxDCFW_twXMWlBWEw_vFaAIwvjB5e6wm8DhkgaObx-3UjgzYFml8itzV0ktMRuAYCsQDijpkFOwMAFdfCQ2&t=635304888701212866"></script>
     <script>
         //提交后返回结果
@@ -90,8 +92,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </ul>
 
 
-<form action="/member/UpgradeMan" data-ajax="true" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-update="#ListContent" id="searchForm" method="post">                    <ul class="search">
+<form action="reinvestmentAndBonusList"  id="searchForm" method="post">                   
+		 <ul class="search">
+                       
                         <li>
+                        <input type="hidden" name="start" value="1">
+                        <input type="hidden" name="pageSize" value="9">
                             <div class="group">
                                 <label class="label">
 
@@ -134,7 +140,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td align="center">${fenhongOrder.futoumoney}</td>
             <td align="center">${fenhongOrder.allfenhong}</td>
             <td align="center">${fenhongOrder.truefenhong}</td>
-            <td align="center">${fenhongOrder.time}</td>
+            <td align="center"><fmt:formatDate value="${fenhongOrder.time}" pattern="yyyy-MM-dd"/></td>
             <td align="center">分红中</td>
         </tr>
 	  </c:forEach>

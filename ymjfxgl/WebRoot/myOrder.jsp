@@ -1,6 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@page import="com.gqw.util.PublicParameters"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -12,13 +13,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     <meta name="viewport" content="width=device-width" />
     <title>我的订单</title>
+    <script src="style/js/jquery-1.10.1.min.js"></script>
     <link href="style/css/StyleSheet.css" rel="stylesheet" />
-    <script src="style/js/jquery-1.7.1.min.js"></script>
+    
     <script src="style/js/jquery.unobtrusive-ajax.min.js"></script>
-    <script src="style/js/WdatePicker.js"></script>
-
-<script type="text/javascript" src="/WebResource.axd?d=zUbwwxDCFW_twXMWlBWEw_vFaAIwvjB5e6wm8DhkgaObx-3UjgzYFml8itzV0ktMRuAYCsQDijpkFOwMAFdfCQ2&t=635304888701212866"></script>
-
+	<script type="text/javascript" src="style/css/WebResource.axd"></script>
+	<link rel="stylesheet" href="style/css/layer.css" id="layuicss-skinlayercss">
+    <link href="style/css/WdatePicker.css" rel="stylesheet" type="text/css">
+    <script src="style/js/WdatePicker/WdatePicker.js"></script>
 </head>
 <body>
     <!--最外层-->
@@ -32,8 +34,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <!--当前位置-->
   <ul class="location">
-    <li><a href="#">订购商城</a></li>
-    <li><a href="#">我的订单</a></li>
+    <li><a href="javascript:void(0)">订购商城</a></li>
+    <li><a href="javascript:void(0)">我的订单</a></li>
   </ul>
 
 
@@ -48,27 +50,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
             <div class="listing_box">
-<form action="conditionOrderPageQuery" data-ajax="true" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-update="#ListContent" id="searchForm" method="post">                        <label style="margin-left:10px;">购物积分余额：12.00</label>  
+<form action="conditionOrderPageQuery"   id="searchForm" method="post">                       
+				 <label style="margin-left:10px;">购物积分余额：12.00</label>  
                    <input type="hidden" name="start" value="1">
                		<input type="hidden" name="pageSize" value="9">
+               		<input type="hidden" name="loginid" value="<%=PublicParameters.id %>">
                     <ul class="search">   
                         <li>
                             <div class="group">
                                 <label class="label">订单编号：</label> 
                                 <input name="ordernumber" id="sOrderID" type="text" class="input" size="10"  />
                                 <label class="label">订单状态：</label> 
-                                <select name="sFlag" id="sFlag" class="selectbox">
+                                <select name="status" id="sFlag" class="selectbox">
                                     <option value="">所有状态</option>
-                                    <option value="0">未发货</option>
-                                    <option value="1">已发货</option>
-                                    <option value="2">已收货</option>
+                                    <option value="未发货">未发货</option>
+                                    <option value="已发货">已发货</option>
+                                    <option value="已收货">已收货</option>
                                 </select>
                                 <label class="label">订单日期：</label> 
-                                <input id="startDate" name="date1" type="text" class="input"  onclick="WdatePicker()" size="10" value="" readonly="ture" />
+                                <input id="startDate" name="dateO" type="text" class="input"  onclick="WdatePicker()" size="10" value="" readonly="ture" />
                                 <label class="label">至</label> 
                             </div>
                             <div class="group">  
-                                <input id="overDate" name="date2" type="text" class="input" onclick="WdatePicker()" size="10" value="" readonly="ture" />
+                                <input id="overDate" name="dateT" type="text" class="input" onclick="WdatePicker()" size="10" value="" readonly="ture" />
                                 <input name="" type="submit" class="searchbtn" value="搜 索" />
 
                             </div>
@@ -278,7 +282,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <td align="center">${order.name}</td>
             <td align="center">${order.numbers}</td>
             <td align="center">${order.money}</td>
-            <td align="center">${order.ordertime}</td>
+            <td align="center"><fmt:formatDate value="${order.ordertime}" pattern="yyyy-MM-dd"/></td>
             <td align="center">${order.shouhuoren}</td>
             <td align="center">${order.shouhuoaddress}</td>
             <td align="center">${order.phonenumber}</td>
@@ -359,10 +363,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <li class="pageleft">
 		</li>
         <li class="pageright">
-			<a href="conditioncommodityPageQuery?start=1&pageSize=9">首页</a>
-			<a href="conditioncommodityPageQuery?start=${pager.prev}&pageSize=9">上一页</a>
-			<a href="conditioncommodityPageQuery?start=${pager.next}&pageSize=9">下一页</a>
-			<a href="conditioncommodityPageQuery?start=${pager.totalPage}&pageSize=9">尾页</a>
+          <c:if test="${pager.pageIndex>1}">
+			<a href="conditionOrderPageQuery?start=1&pageSize=9&loginid=<%=PublicParameters.id %>">首页</a>
+			<a href="conditionOrderPageQuery?start=${pager.prev}&pageSize=9&loginid=<%=PublicParameters.id %>">上一页</a>
+		 </c:if>
+		 <c:if test="${pager.pageIndex<pager.totalPage}">
+			<a href="conditionOrderPageQuery?start=${pager.next}&pageSize=9&loginid=<%=PublicParameters.id %>">下一页</a>
+			<a href="conditionOrderPageQuery?start=${pager.totalPage}&pageSize=9&loginid=<%=PublicParameters.id %>">尾页</a>
+         </c:if>
             <!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
             <div class="ap">
                 

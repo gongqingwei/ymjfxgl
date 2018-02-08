@@ -1,6 +1,8 @@
 package com.gqw.controller.myorder;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -15,6 +17,7 @@ import com.gqw.bean.Order;
 import com.gqw.bean.OrderPager;
 import com.gqw.bean.Pager;
 import com.gqw.service.order.MyOrderServiceImpl;
+import com.gqw.util.PublicParameters;
 @Controller
 public class MyOrderController {
 	@Autowired
@@ -25,8 +28,6 @@ public class MyOrderController {
 		Date day=new Date();    
 		SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
 		String a=df.format(day);
-		SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd");
-		String today=df1.format(day);
 		int five=(int) (Math.random()*90000+10000);
 		String b=String.valueOf(five);
 		StringBuffer sb=new StringBuffer();
@@ -37,7 +38,10 @@ public class MyOrderController {
 		order.setNumbers(Integer.parseInt(ps1));
 		Float money=commodityPrice*Integer.parseInt(ps1);
 		order.setMoney(money);
-		order.setOrdertime(today);
+		Date day1=new Date();    
+		 SimpleDateFormat df1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 String now=df1.format(day1);
+		order.setOrdertime(PublicParameters.StringToDate(now,"yyyy-MM-dd HH:mm:ss"));
 		order.setShouhuoren(nickName);
 		order.setShouhuoaddress(address);
 		order.setPhonenumber(tels);
@@ -54,19 +58,46 @@ public class MyOrderController {
 		}
 	}
 	@RequestMapping("conditionOrderPageQuery")
-	public String conditionOrderPageQuery(HttpServletRequest request,Map<String,Object> map,int start,int pageSize,String loginid,String ordernumber,String status,String date1,String date2){
-
+	public String conditionOrderPageQuery(HttpServletRequest request,Map<String,Object> map,int start,int pageSize,
+			int loginid,String ordernumber,String status,String dateO,String dateT){
+		SimpleDateFormat sdf =   new SimpleDateFormat( " yyyy-MM-dd " ); 
+		Date dateOne=null;
+		Date dateTwo=null;
+		try {
+			dateOne = sdf.parse(dateO);
+			dateTwo=sdf.parse(dateT);
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if((Object)dateOne==""){
+			dateOne=null;
+			dateTwo=null;
+		}
+		
+		if((Object)ordernumber==""){
+			ordernumber=null;
+		}
 		if(ordernumber!=null){
 			map.put("ordernumber", ordernumber);
+		}
+		if(status==""){
+			status=null;
 		}
 		if(status!=null){
 			map.put("status", status);
 		}
-		if(date1!=null&&date2!=null){
-			map.put("date1", date1);
-			map.put("date2", date2);
+		if((Object)dateOne==""){
+			dateOne=null;
 		}
-		List<Order> orders=myOrderServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize,loginid, ordernumber, status, date1, date2);
+		if((Object)dateTwo==""){
+			dateTwo=null;
+		}
+		if(dateOne!=null&&dateTwo!=null){
+			map.put("date1", dateOne);
+			map.put("date2", dateTwo);
+		}
+		List<Order> orders=myOrderServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize,loginid, ordernumber, status, dateOne, dateTwo);
 		request.setAttribute("orders", orders);
 		OrderPager pager=new OrderPager();
 		pager.setPageIndex(start);
@@ -75,9 +106,10 @@ public class MyOrderController {
 		pager.setTotalPage(myOrderServiceImpl.countOrders()/pageSize==0?myOrderServiceImpl.countOrders()/pageSize:myOrderServiceImpl.countOrders()/pageSize+1);
 		pager.setOrdernumber(ordernumber);
 		pager.setStatus(status);
-//		pager.setDate1(Integer.parseInt(date1));
-//		pager.setDate2(Integer.parseInt(date2));
+//		pager.setDate1(date1);
+//		pager.setDate2(date2);
 		map.put("pager", pager);
 		return "myOrder";
 	}
+	
 }

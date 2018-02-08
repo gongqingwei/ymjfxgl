@@ -16,7 +16,7 @@
 	<if test="status!=null">
 		and status=#{status}
 	</if>
-	<if test="date1!=null and date2!=null">
+	<if test="date1!=null and date2!=null  and date1!='' and date2!=''">
 		and ordertime between #{date1} and #{date2}
 	</if>
 	limit #{start},#{pageSize}

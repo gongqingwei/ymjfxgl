@@ -1,4 +1,7 @@
 package com.gqw.bean;
+
+import java.util.Date;
+
 /**
  * 用于商品列表分页
  * @author Administrator
@@ -9,8 +12,8 @@ public class OrderPager {
 	private int totalPage;//总页数
 	private String ordernumber;
 	private String status;
-	private int date1;
-	private int date2;
+	private Date date1;
+	private Date date2;
 	private int prev;//上一页，jsp用
 	private int next;//下一页，jsp用
 	
@@ -52,23 +55,23 @@ public class OrderPager {
 	public void setStatus(String status) {
 		this.status = status;
 	}
-	public int getDate1() {
+	public Date getDate1() {
 		return date1;
 	}
-	public void setDate1(int date1) {
+	public void setDate1(Date date1) {
 		this.date1 = date1;
 	}
-	public int getDate2() {
+	public Date getDate2() {
 		return date2;
 	}
-	public void setDate2(int date2) {
+	public void setDate2(Date date2) {
 		this.date2 = date2;
 	}
 	public OrderPager() {
 		super();
 	}
 	public OrderPager(int pageIndex, int totalPage, String ordernumber,
-			String status, int date1, int date2, int prev, int next) {
+			String status, Date date1, Date date2, int prev, int next) {
 		super();
 		this.pageIndex = pageIndex;
 		this.totalPage = totalPage;

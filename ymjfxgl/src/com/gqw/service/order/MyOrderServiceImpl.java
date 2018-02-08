@@ -1,5 +1,6 @@
 package com.gqw.service.order;
 
+import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
@@ -18,7 +19,9 @@ public class MyOrderServiceImpl implements MyOrderService{
 		// TODO Auto-generated method stub
 		return myorder.insertOrder(order);
 	}
-	public List<Order> conditionPageOrder(@Param("start")int start,@Param("pageSize")int pageSize,@Param("loginId")String loginId,@Param("ordernumber")String ordernumber,@Param("status")String status,@Param("date1")String date1,@Param("date2")String date2) {
+	public List<Order> conditionPageOrder(@Param("start")int start,@Param("pageSize")int pageSize,
+			@Param("loginId")int loginId,@Param("ordernumber")String ordernumber,@Param("status")String status,
+			@Param("date1")Date date1,@Param("date2")Date date2) {
 		// TODO Auto-generated method stub
 		return myorder.conditionPageOrder(start, pageSize, loginId, ordernumber, status, date1, date2);
 	}
