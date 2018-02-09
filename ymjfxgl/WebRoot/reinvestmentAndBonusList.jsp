@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@page import="com.gqw.util.PublicParameters"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
@@ -103,14 +104,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                                     订单编号：
                                 </label>
-                                <input name="UserID" type="text" value="" class="input" />
+                                <input name="number" type="text" value="" class="input" />
                             </div>
                             <div class="group">
-                                <label class="label">日期：</label><input id="startDate" name="startDate" type="text" onclick="WdatePicker()" class="input" value="" readonly="ture" />
+                                <label class="label">日期：</label><input id="startDate" name="date1" type="text" onclick="WdatePicker()" class="input" value="<fmt:formatDate value='<%=PublicParameters.date1 %>' pattern="yyyy-MM-dd"/>" readonly="ture" />
                             </div>
                             <div class="group">
                                 <label class="label">至</label>
-                                <input id="overDate" name="overDate" type="text" onclick="WdatePicker()" class="input" value="" readonly="ture" />
+                                <input id="overDate" name="date2" type="text" onclick="WdatePicker()" class="input" value="<fmt:formatDate value='<%=PublicParameters.date2 %>' pattern="yyyy-MM-dd"/>" readonly="ture" />
                             </div>
                             <div class="group">
                                 <input name="" type="submit" class="searchbtn" value="搜 索" />
@@ -149,17 +150,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <ul style="">
         <li class="pageleft">共 1 条, 1 / 1 页</li>
         <li class="pageright">
-            <!-- AspNetPager V6.0.0 for VS2005  Copyright:2003-2006 Webdiyer (www.webdiyer.com) -->
-           
-                
-<!--MvcPager v2.0 for ASP.NET MVC 3.0+ © 2009-2013 Webdiyer (http://www.webdiyer.com)-->
-<div data-ajax="true" data-ajax-dataformid="#searchForm" data-ajax-method="Post" data-ajax-update="#ListContent" data-invalidpageerrmsg="页索引无效" data-maxpages="1" data-mvcpager="true" data-outrangeerrmsg="页索引超出范围" data-pageparameter="page" data-urlformat="/member/UpgradeMan?page=__page__"><a disabled="disabled">首页</a>&nbsp;&nbsp;<a disabled="disabled">上一页</a>&nbsp;&nbsp;1&nbsp;&nbsp;<a disabled="disabled">下一页</a>&nbsp;&nbsp;<a disabled="disabled">尾页</a>&nbsp;&nbsp;<input type="text" value="1" data-pageindexbox="true"/><input type="button" data-submitbutton="true" value="跳转"/></div>
-<!--MvcPager v2.0 for ASP.NET MVC 3.0+ © 2009-2013 Webdiyer (http://www.webdiyer.com)-->
-
-              
-            <!-- AspNetPager V6.0.0 for VS2005 End -->
-
-
+        	 <c:if test="${pager.pageIndex>1}">
+        	<a href="reinvestmentAndBonusList?start=1&pageSize=9&loginid=<%=PublicParameters.id %>">首页</a>
+			<a href="reinvestmentAndBonusList?start=${pager.prev}&pageSize=9&loginid=<%=PublicParameters.id %>">上一页</a>
+			</c:if>
+			<c:if test="${pager.pageIndex<pager.totalPage}">
+			<a href="reinvestmentAndBonusList?start=${pager.next}&pageSize=9&loginid=<%=PublicParameters.id %>">下一页</a>
+			<a href="reinvestmentAndBonusList?start=${pager.totalPage}&pageSize=9&loginid=<%=PublicParameters.id %>">尾页</a>
+			</c:if>
         </li>
     </ul>
 </div> 

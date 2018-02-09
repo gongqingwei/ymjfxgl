@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- namespace的值一定是接口的全路径与接口绑定后,此文件相当于接口的实现类  -->
+<mapper namespace="com.gqw.dao.baodanApplyCenter.BaodanApplyCenterMapper">
+
+</mapper>
+

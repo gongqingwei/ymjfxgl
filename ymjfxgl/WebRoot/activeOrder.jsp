@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -80,21 +81,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th scope="col">状态</th>
       
     </tr>
+      <c:forEach var="user" items="${users}">
         <tr>
-            <td>xq88888</td>
-            <td>徐青</td>
+            <td>${user.username }</td>
+            <td>${user.truename }</td>
           
-            <td>15278910411</td>
+            <td>${user.phonenumber }</td>
             
-            <td>600.00</td>
-            <td>txp88888</td>
+            <td>${user.rengounumber*200  }</td>
+            <td>${user.tuijianrennumber}</td>
             <td>zgg888<br />
                   左区
             </td>
-            <td style="line-height: 14px;">2017/12/18 17:00:06</td>
+            <td style="line-height: 14px;"><fmt:formatDate value="${user.opentime}" pattern="yyyy-MM-dd"/></td>
             <td>正常</td>
             
         </tr>
+        </c:forEach>
         <tr>
             <td>zxa88888</td>
             <td>张训安</td>

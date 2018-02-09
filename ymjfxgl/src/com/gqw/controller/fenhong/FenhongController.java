@@ -14,6 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gqw.bean.JifendianzibiOrder;
+import com.gqw.bean.OrderPager;
 import com.gqw.bean.User;
 import com.gqw.dao.LoginMapper;
 import com.gqw.service.fenhong.FenhongServiceImpl;
@@ -26,8 +27,16 @@ public class FenhongController {
 	private LoginMapper loginMapper;
 	 @RequestMapping("reinvestmentAndBonusList")
 	 public String yanzhengreinvestmentAndBonusList(Map<String,Object> map,HttpServletRequest request,String username,
-			 String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,String ordernumber,
-			 Date date1,Date date2){
+			 String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,String number,
+			 String date1,String date2){
+		
+		 if(date1!=null && (Object)date1!=""){
+				PublicParameters.date1=PublicParameters.StringToDate(date1,"yyyy-MM-dd");
+				PublicParameters.date2=PublicParameters.StringToDate(date2,"yyyy-MM-dd");
+			}else{
+				PublicParameters.date1=null;
+				PublicParameters.date2=null;
+			}
 		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
 			 if((Object)start==null){
@@ -37,9 +46,19 @@ public class FenhongController {
 			 loginId=String.valueOf(PublicParameters.id);
 			
 			 List<JifendianzibiOrder> fenhongOrders=new ArrayList<JifendianzibiOrder>();
-			 fenhongOrders= fenhongServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize, loginId, ordernumber, date1, date2);
+			 fenhongOrders= fenhongServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize, loginId, number, PublicParameters.date1, PublicParameters.date2);
 			 map.put("ordernumber", fenhongServiceImpl.selectLogin_username(loginId));
 			 map.put("fenhongOrders", fenhongOrders);
+			 //分页
+			 OrderPager pager=new OrderPager();
+			 pager.setDate1(PublicParameters.date1);
+			 pager.setDate2(PublicParameters.date2);
+			 pager.setPageIndex(start);
+			 pager.setPrev(start-1);
+			 pager.setNext(start+1);
+			 int counts=fenhongServiceImpl.countsOrder(Integer.parseInt(loginId));
+			 pager.setTotalPage(counts/pageSize==0?counts/pageSize:counts/pageSize+1);
+			 map.put("pager", pager);
 			 return "reinvestmentAndBonusList";
 		 }else{
 			 request.setAttribute("jspName", "reinvestmentAndBonusList");
@@ -53,8 +72,7 @@ public class FenhongController {
 		 fenhongOrder.setOrdernumber(number);
 		 StringBuilder a=new StringBuilder(number);
 		 a.append("-");
-		 a.append(PublicParameters.fenhongNumber);
-		 PublicParameters.fenhongNumber++;
+		 a.append(fenhongServiceImpl.countsOrder(PublicParameters.id)+1);
 		 fenhongOrder.setNumber(a.toString());
 		 fenhongOrder.setFutounumber(num);
 		 fenhongOrder.setFutoumoney(100*num);

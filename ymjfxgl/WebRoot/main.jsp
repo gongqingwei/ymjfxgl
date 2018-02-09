@@ -106,7 +106,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
               </form>
               <!-- end 响应快速搜索表单 -->
             </li>
-            <li class="active"><a href="http://www.ymjfxgl.com/Default/Default" target="iframemain"><i class="icon-home"></i><span class="title">系统首页 <span class="label-en">Home</span></span> <span class="selected"></span></a></li>
+            <li class="active"><a href="myHomePage.jsp" target="iframemain"><i class="icon-home"></i><span class="title">系统首页 <span class="label-en">Home</span></span> <span class="selected"></span></a></li>
             <li class=""><a href="javascript:;"><i class="icon-shopping-cart"></i><span class="title">订购商城 <span class="label-en">shopping</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
                  <li><a href="conditioncommodityPageQuery?start=1&pageSize=9" target="iframemain">商品列表 <span class="label-en"></span></a></li>
@@ -122,8 +122,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </li>
             <li class=""><a href="javascript:;"><i class="icon-user"></i><span class="title">激活管理 <span class="label-en">activation</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-                  <li><a href="activeOrder.jsp" target="iframemain">已激活订单 <span class="label-en"></span></a></li>
-                  <li><a href="unactivatedOrder.jsp" target="iframemain">未激活订单 <span class="label-en"></span></a></li>
+                  <li><a href="activeOrder" target="iframemain">已激活订单 <span class="label-en"></span></a></li>
+                  <li><a href="unactivatedOrder" target="iframemain">未激活订单 <span class="label-en"></span></a></li>
 	           </ul>
             </li>
             <li class=""><a href="javascript:;"><i class="icon-tags"></i><span class="title">财务管理 <span class="label-en">Finance</span></span> <span class="arrow"></span></a>

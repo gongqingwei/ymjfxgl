@@ -14,6 +14,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
@@ -45,6 +49,18 @@ public class LoginController {
 	private LoginMapper loginMapper;
 	@Autowired
 	private JifendianzibiMapper jifendianzibiMapper;
+	/**
+	 * 用户登录
+	 * @param request
+	 * @param response
+	 * @param map
+	 * @param username
+	 * @param password
+	 * @param user_input_verifyCode
+	 * @param pwd
+	 * @param thirdpwd
+	 * @return
+	 */
 	@RequestMapping("login")
 	public String isLogin(HttpServletRequest request,HttpServletResponse response,Map map,String username,String password,String user_input_verifyCode,String pwd,String thirdpwd){
 		User user=loginMapper.login(username,password,pwd,thirdpwd);
@@ -57,6 +73,9 @@ public class LoginController {
 		}else if(!code.equals(user_input_verifyCode)){
 			System.out.println("code is error");
 			
+			return "index";
+		}else if(user.getIdentity()==0){
+			System.out.println("no activity");
 			return "index";
 		}else{
 			PublicParameters.id=Integer.parseInt(user.getId());
@@ -118,7 +137,26 @@ public class LoginController {
 			return "main";
 		}
 	}
-	
+	/**
+	 * 创建一个用户
+	 * @param UserID
+	 * @param password
+	 * @param passopen
+	 * @param passencry
+	 * @param regNum
+	 * @param reName
+	 * @param shopNumber
+	 * @param userName
+	 * @param userTels
+	 * @param userCode
+	 * @param userAddress
+	 * @param bankName
+	 * @param bankBranch
+	 * @param bankAddress
+	 * @param bankUser
+	 * @param bankCard
+	 * @return
+	 */
 	@RequestMapping("registerOrder")
 	public String registerOrder(String UserID,String password,String passopen,String passencry,String regNum,String reName,String shopNumber,String userName,String userTels,String userCode,String userAddress,String bankName,String bankBranch,String bankAddress,String bankUser,String bankCard){
 		
@@ -139,7 +177,12 @@ public class LoginController {
 		user.setBankfenlichu(bankAddress);
 		user.setKaihuname(bankUser);
 		user.setBanknumber(bankCard);
-		
+		user.setIdentity(0);
+		user.setPid(PublicParameters.id);
+		Date day=new Date();    
+		 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+		 String now=df.format(day);
+		user.setOpentime(PublicParameters.StringToDate(now,"yyyy-MM-dd"));
 		Boolean bool=loginMapper.insertOrder(user);
 		if(bool){
 			System.out.println("success");
@@ -148,7 +191,52 @@ public class LoginController {
 			return "registeredOrder";
 		}
 	}
-	
+	/**
+	 * 申请报单中心中
+	 * @return
+	 */
+	@RequestMapping("ApplyAgent")
+	public String applyAgent(){
+		Boolean bool=loginMapper.updateIdentity(PublicParameters.id, 2);
+		return "applicationReportingCenter";
+	}
+	/**
+	 * 查询已激活订单
+	 * @return
+	 */
+	@RequestMapping("activeOrder")
+	public String activeOrder(Map<String,Object> map){
+		List<User> users=loginMapper.loginById(PublicParameters.id);
+		List<User> activeUsers=new ArrayList();
+		for (User user : users) {
+			if(user.getIdentity()!=0){
+				activeUsers.add(user);
+			}
+		}
+		map.put("users", activeUsers);
+		return "activeOrder";
+	}
+	/**
+	 * 查询已激活订单
+	 * @return
+	 */
+	@RequestMapping("unactivatedOrder")
+	public String unactivatedOrder(Map<String,Object> map){
+		List<User> users=loginMapper.loginById(PublicParameters.id);
+		List<User> unactiveUsers=new ArrayList();
+		for (User user : users) {
+			if(user.getIdentity()==0){
+				unactiveUsers.add(user);
+			}
+		}
+		map.put("users", unactiveUsers);
+		return "activeOrder";
+	}
+	/**
+	 * 生成验证码
+	 * @param response
+	 * @param session
+	 */
 	@RequestMapping("/getVerifyCode")  
     public void generate(HttpServletResponse response, HttpSession session) {  
         ByteArrayOutputStream output = new ByteArrayOutputStream();  

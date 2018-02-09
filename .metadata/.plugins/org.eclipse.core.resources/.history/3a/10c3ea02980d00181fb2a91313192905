@@ -1,0 +1,27 @@
+package com.gqw.bean;
+
+import java.util.Date;
+
+public class User {
+	private String id;
+	private int pid;
+	private String username;
+	private String password;
+	private int identity;
+	private String seondpassword;
+	private String thirdpassword;
+	private int rengounumber;
+	private String tuijianrennumber;
+	private String baodancenternumber;
+	private String truename;
+	private String phonenumber;
+	private String shenfenzhengnumber;
+	private String adress;
+	private String bankmessage;
+	private String bankzhihang;
+	private String bankfenlichu;
+	private String kaihuname;
+	private String banknumber;
+	private Date opentime;
+	
+}

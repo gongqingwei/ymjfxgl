@@ -1,0 +1,5 @@
+package com.gqw.dao.baodanApplyCenter;
+
+public interface BaodanApplyCenterMapper {
+
+}

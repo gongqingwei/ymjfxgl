@@ -27,6 +27,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
         }
         function AfterAdd(result) {
+        alert("提交成功");
             if (result == "ok") {
                 alert("提交成功！");
                 window.location.reload();
@@ -82,7 +83,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 
             
-<form action="/Agent/ApplyAgent" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post"> <div class="dataStyle ">
+<form action="ApplyAgent" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post"> <div class="dataStyle ">
                     <ul class="index_control" style="display: block">
                         <li>
                             <label>报单中心编号：</label>

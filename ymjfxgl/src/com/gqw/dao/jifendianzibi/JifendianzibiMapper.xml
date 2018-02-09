@@ -10,8 +10,8 @@
 	</insert>
 	<select id="conditionPageOrder" parameterType="string" resultType="JifendianzibiOrder">
 		select * from jifendianzibidingdan  where loginid=#{loginId}
-		<if test="ordernumber!=null and ordernumber!=''">
-			and ordernumber=#{ordernumber}
+		<if test="number!=null and number!=''">
+			and number=#{number}
 		</if>
 		<if test="date1!=null and date2!=null and date1!='' and date2!=''">
 			and time between #{date1} and #{date2}
@@ -25,5 +25,8 @@
 	
 	<select id="selectMycount" parameterType="int" resultType="Integral">
 		select * from integral where loginid=#{loginid}
+	</select>
+	<select id="countsOrder" resultType="int">
+		select count(*) from jifendianzibidingdan where loginid=#{loginid};
 	</select>
 </mapper>

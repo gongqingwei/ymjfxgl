@@ -28,7 +28,7 @@ public interface JifendianzibiMapper {
 	 */
 	public List<JifendianzibiOrder> conditionPageOrder(@Param("start")int start,
 			@Param("pageSize")int pageSize,@Param("loginId")String loginId,
-			@Param("ordernumber")String ordernumber,@Param("date1")Date date1,
+			@Param("number")String number,@Param("date1")Date date1,
 			@Param("date2")Date date2);
 	/**
 	 * 查询订单编号
@@ -37,9 +37,15 @@ public interface JifendianzibiMapper {
 	 */
 	public String selectLogin_username(String loginid);
 	/**
+	 * 查询一共多少订单
+	 * @return
+	 */
+	public int countsOrder(@Param("loginid")int loginid);
+	/**
 	 * 我的账户
 	 * @param loginid
 	 * @return
 	 */
 	public Integral selectMycount(@Param("loginid")String loginid);
+	
 }
