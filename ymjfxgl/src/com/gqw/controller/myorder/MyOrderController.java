@@ -3,6 +3,7 @@ package com.gqw.controller.myorder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -59,20 +60,20 @@ public class MyOrderController {
 	}
 	@RequestMapping("conditionOrderPageQuery")
 	public String conditionOrderPageQuery(HttpServletRequest request,Map<String,Object> map,int start,int pageSize,
-			int loginid,String ordernumber,String status,String dateO,String dateT){
-		SimpleDateFormat sdf =   new SimpleDateFormat( " yyyy-MM-dd " ); 
-		Date dateOne=null;
-		Date dateTwo=null;
-		try {
-			dateOne = sdf.parse(dateO);
-			dateTwo=sdf.parse(dateT);
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			int loginid,String ordernumber,String status,String date1,String date2){
+		Date date11=null;
+		Date date22=null;
+		if(date1!=null && (Object)date1!=""){
+			PublicParameters.date1=PublicParameters.StringToDate(date1,"yyyy-MM-dd");
+			PublicParameters.date2=PublicParameters.StringToDate(date2,"yyyy-MM-dd");
+		}else{
+			PublicParameters.date1=null;
+			PublicParameters.date2=null;
 		}
-		if((Object)dateOne==""){
-			dateOne=null;
-			dateTwo=null;
+		
+		if((Object)date1==""){
+			date1=null;
+			date2=null;
 		}
 		
 		if((Object)ordernumber==""){
@@ -87,17 +88,13 @@ public class MyOrderController {
 		if(status!=null){
 			map.put("status", status);
 		}
-		if((Object)dateOne==""){
-			dateOne=null;
+		
+		if(date1!=null&&date2!=null){
+			map.put("date1", date1);
+			map.put("date2", date2);
 		}
-		if((Object)dateTwo==""){
-			dateTwo=null;
-		}
-		if(dateOne!=null&&dateTwo!=null){
-			map.put("date1", dateOne);
-			map.put("date2", dateTwo);
-		}
-		List<Order> orders=myOrderServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize,loginid, ordernumber, status, dateOne, dateTwo);
+		List<Order> orders=new ArrayList<Order>();
+			orders=myOrderServiceImpl.conditionPageOrder((start-1)*pageSize, pageSize,loginid, ordernumber, status, PublicParameters.date1, PublicParameters.date2);
 		request.setAttribute("orders", orders);
 		OrderPager pager=new OrderPager();
 		pager.setPageIndex(start);

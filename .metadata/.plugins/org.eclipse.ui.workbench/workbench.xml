@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="93" version="2.0">
+<workbench progressCount="58" version="2.0">
 <workbenchAdvisor/>
 <window height="738" maximized="true" width="1024" x="268" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -8,7 +8,7 @@
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="197" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="292" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.genuitec.eclipse.j2eedt.core.ejb" itemType="typeToolBarContribution" x="55" y="22"/>
 <coolItem id="com.genuitec.eclipse.uml.actions" itemType="typeToolBarContribution" x="61" y="22"/>
@@ -18,12 +18,12 @@
 <coolItem id="com.genuitec.myeclipse.actions.desktop" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="com.genuitec.myeclipse.actions.reporting" itemType="typeToolBarContribution" x="78" y="22"/>
 <coolItem id="com.genuitec.myeclipse.actions.screencapture" itemType="typeToolBarContribution" x="55" y="22"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="175" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="135" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="101" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="147" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="115" y="22"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -42,7 +42,7 @@
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
-<page aggregateWorkingSetId="Aggregate for window 1517644892183" focus="true" label="工作空间 － MyEclipse Java Enterprise">
+<page aggregateWorkingSetId="Aggregate for window 1517644892183" focus="true" label="工作空间 － 调试">
 <editors>
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
@@ -62,10 +62,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyOrderController.java" partName="MyOrderController.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/controller/myorder/MyOrderController.java" title="MyOrderController.java" tooltip="ymjfxgl/src/com/gqw/controller/myorder/MyOrderController.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/controller/myorder/MyOrderController.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2442" selectionTopPixel="663"/>
-</editor>
-<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="main.jsp" partName="main.jsp" path="E:/www/testgit/ymjfxgl/WebRoot/main.jsp" title="main.jsp" tooltip="ymjfxgl/WebRoot/main.jsp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/WebRoot/main.jsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2262" selectionTopPixel="663"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyOrderMapper.java" partName="MyOrderMapper.java" path="E:/www/testgit/ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.java" title="MyOrderMapper.java" tooltip="ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.java"/>
@@ -73,6 +70,9 @@
 </editor>
 <editor id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="MyOrderMapper.xml" partName="MyOrderMapper.xml" path="E:/www/testgit/ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.xml" title="MyOrderMapper.xml" tooltip="ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.xml" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/src/com/gqw/dao/order/MyOrderMapper.xml"/>
+</editor>
+<editor id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" partName="index.jsp" path="E:/www/testgit/ymjfxgl/WebRoot/index.jsp" title="index.jsp" tooltip="ymjfxgl/WebRoot/index.jsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ymjfxgl/WebRoot/index.jsp"/>
 </editor>
 </editors>
 <views>
@@ -114,8 +114,7 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="问题">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="问题">
-<expanded>
-<category IMemento.internal.id="错误"/>
+<expanded>&#x0A;<category IMemento.internal.id="错误"/>
 <category IMemento.internal.id="警告"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -160,7 +159,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="com.genuitec.myeclipse.perspective.myeclipseperspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.debug.ui.DebugPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.genuitec.myeclipse.perspective.MyEclipsePerspectiveFactory" id="com.genuitec.myeclipse.perspective.myeclipseperspective" label="MyEclipse Java Enterprise"/>
 <alwaysOnActionSet id="com.genuitec.myeclipse.actions.deploytools"/>
@@ -535,107 +534,10 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ymjfxgl/src/com/gqw/controller/myorder/MyOrderController.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/myOrder.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/main.jsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/myOrder.jsp"/>
 <editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web-3.0.5.RELEASE.jar&lt;org.springframework.web.bind.annotation.support(HandlerMethodInvoker.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/ymjfxgl/WebRoot/index.jsp"/>
 </editors>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2701" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2545" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2616" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2618" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2650" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2545" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2616" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2618" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2650" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2677" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2749" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2768" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2790" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2847" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2898" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2949" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="3053" y="0"/>
-</item>
-<item historyLabel="myOrder.jsp" index="1"/>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2545" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2648" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2545" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2675" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2545" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2618" y="0"/>
-</item>
-<item historyLabel="myOrder.jsp" index="1"/>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2618" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2417" y="0"/>
-</item>
-<item historyLabel="myOrder.jsp" index="1"/>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2417" y="0"/>
-</item>
-<item historyLabel="myOrder.jsp" index="1"/>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2417" y="0"/>
-</item>
-<item historyLabel="main.jsp" index="2">
-<position info="not_deleted" x="5295" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2042" y="23"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2260" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2571" y="0"/>
-</item>
 <item historyLabel="MyOrderController.java" index="0">
 <position info="not_deleted" x="2329" y="0"/>
 </item>
@@ -643,37 +545,106 @@
 <position info="not_deleted" x="2351" y="0"/>
 </item>
 <item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2382" y="0"/>
+<position info="not_deleted" x="2238" y="5"/>
+</item>
+<item historyLabel="myOrder.jsp" index="1"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2238" y="5"/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2476" y="0"/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2262" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2547" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2331" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2353" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position/>
 </item>
 <item historyLabel="HandlerMethodInvoker.class" index="3"/>
 <item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2513" y="0"/>
-</item>
-<item historyLabel="DispatcherServlet.class" index="4"/>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2513" y="0"/>
+<position/>
 </item>
 <item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2474" y="0"/>
+<position info="not_deleted" x="2402" y="0"/>
 </item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2406" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2262" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2438" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2331" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2353" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2384" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2579" y="0"/>
+</item>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2652" y="0"/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2262" y="0"/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2260" y="0"/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="index.jsp" index="4"/>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="index.jsp" index="4"/>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="index.jsp" index="4"/>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="index.jsp" index="4"/>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="index.jsp" index="4"/>
+<item historyLabel="myOrder.jsp" index="2"/>
+<item historyLabel="MyOrderController.java" index="0">
+<position info="not_deleted" x="2260" y="0"/>
+</item>
+<item historyLabel="myOrder.jsp" index="2"/>
 <item historyLabel="MyOrderController.java" index="0">
 <position info="not_deleted" x="2260" y="0"/>
 </item>
 <item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2474" y="0"/>
+<position info="not_deleted" x="2329" y="0"/>
 </item>
+<item historyLabel="myOrder.jsp" index="2"/>
 <item historyLabel="MyOrderController.java" index="0">
 <position info="not_deleted" x="2329" y="0"/>
 </item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2351" y="0"/>
-</item>
-<item historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2238" y="5"/>
-</item>
-<item historyLabel="myOrder.jsp" index="1"/>
+<item historyLabel="myOrder.jsp" index="2"/>
 <item active="true" historyLabel="MyOrderController.java" index="0">
-<position info="not_deleted" x="2238" y="5"/>
+<position info="not_deleted" x="2262" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -683,10 +654,8 @@
 <trimLayout>
 <trimArea IMemento.internal.id="16384">
 <trimItem IMemento.internal.id="bottomleft"/>
-<trimItem IMemento.internal.id="topleft"/>
 </trimArea>
 <trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@16c433e"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@b2d28b"/>
 </trimArea>
@@ -697,16 +666,18 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DispatcherServlet.class" tooltip="org.springframework.web.servlet.DispatcherServlet">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" name="index.jsp" tooltip="ymjfxgl/WebRoot/index.jsp">
+<persistable path="/ymjfxgl/WebRoot/index.jsp"/>
 </file>
 <file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="HandlerMethodInvoker.class" tooltip="org.springframework.web.bind.annotation.support.HandlerMethodInvoker">
 <persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web-3.0.5.RELEASE.jar&lt;org.springframework.web.bind.annotation.support(HandlerMethodInvoker.class"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="DispatcherServlet.class" tooltip="org.springframework.web.servlet.DispatcherServlet">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=ymjfxgl/E:\/www\/testgit\/ymjfxgl\/WebRoot\/WEB-INF\/lib\/org.springframework.web.servlet-3.0.5.RELEASE.jar&lt;org.springframework.web.servlet(DispatcherServlet.class"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JifendianzibiMapper.java" tooltip="ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.java">
 <persistable path="/ymjfxgl/src/com/gqw/dao/jifendianzibi/JifendianzibiMapper.java"/>
@@ -743,9 +714,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommoditiesService.java" tooltip="ymjfxgl/src/com/gqw/service/CommoditiesService.java">
 <persistable path="/ymjfxgl/src/com/gqw/service/CommoditiesService.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MyOrderService.java" tooltip="ymjfxgl/src/com/gqw/service/order/MyOrderService.java">
-<persistable path="/ymjfxgl/src/com/gqw/service/order/MyOrderService.java"/>
 </file>
 </mruList>
 </workbench>

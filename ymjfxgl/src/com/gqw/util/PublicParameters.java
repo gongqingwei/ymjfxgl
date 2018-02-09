@@ -24,6 +24,8 @@ public class PublicParameters {
 	public static String password;
 	public static String seondpassword;
 	public static String thirdpassword;
+	public static Date date1;
+	public static Date date2;
 	
 	//弃用
 	public static int rengounumber;
