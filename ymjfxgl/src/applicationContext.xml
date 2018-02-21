@@ -38,4 +38,8 @@
 	<property name="mapperInterface" value="com/gqw/dao/email/EmailMapper"></property>
 	<property name="sqlSessionFactory" ref="sqlSession"></property>
 </bean>
+<bean name="tixianMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/tixian/TixianMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
 </beans>

@@ -26,9 +26,9 @@ public class FenhongController {
 	@Autowired
 	private LoginMapper loginMapper;
 	 @RequestMapping("reinvestmentAndBonusList")
-	 public String yanzhengreinvestmentAndBonusList(Map<String,Object> map,HttpServletRequest request,String username,
-			 String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,String number,
-			 String date1,String date2){
+	 public String yanzhengreinvestmentAndBonusList(Map<String,Object> map,HttpServletRequest request,
+			 String username,String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,
+			 String number,String date1,String date2){
 		
 		 if(date1!=null && (Object)date1!=""){
 				PublicParameters.date1=PublicParameters.StringToDate(date1,"yyyy-MM-dd");

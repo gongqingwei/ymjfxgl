@@ -1,0 +1,81 @@
+package com.gqw.controller.tixian;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.Integral;
+import com.gqw.bean.Tixian;
+import com.gqw.bean.User;
+import com.gqw.dao.LoginMapper;
+import com.gqw.service.tixian.TixianServiceImpl;
+import com.gqw.util.PublicParameters;
+@Controller
+public class TixianController {
+
+	@Autowired
+	private LoginMapper loginMapper;
+	@Autowired
+	private TixianServiceImpl tixianServiceImpl;
+	@RequestMapping("CashSubMit")
+	public String CashSubMit(Float mPoints){
+		System.out.println("mp:"+mPoints);
+		Float jiangjinbi=tixianServiceImpl.select_jiangjinbi(PublicParameters.id);
+		if(jiangjinbi>=mPoints){
+			Float jiangjin=jiangjinbi-mPoints;
+			tixianServiceImpl.update_jiangjinbi(PublicParameters.id, jiangjin);
+			Tixian tixianJilu=new Tixian();
+			tixianJilu.setTixianzhanghu("奖金币提现");
+			tixianJilu.setTixianjine(mPoints);
+			tixianJilu.setShijijine((float) (mPoints*0.06));
+			tixianJilu.setStatus(0);
+			tixianJilu.setLoginid(PublicParameters.id);
+			tixianJilu.setTime(new Date());
+			tixianServiceImpl.tixian(tixianJilu);
+		}else{
+			System.out.println("请重新输入提现金额");
+		}
+		return "accountWithdrawal";
+	}
+	
+	/**
+	  * 账户提现
+	  * @param map
+	  * @param request
+	  * @param username
+	  * @param password
+	  * @param pwd
+	  * @param thirdpwd
+	  * @return
+	  */
+	 @RequestMapping("accountWithdrawal")
+	 public String yanzhengaccountWithdrawal(Map<String,Object> map,HttpServletRequest request,
+			 String username,String password,String pwd,String thirdpwd,int start,int pageSize,String loginId,
+			 String number,String date1,String date2){
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
+		 Integral integral=tixianServiceImpl.select_integral(PublicParameters.id);
+		 map.put("integral", integral);
+		 if(date1!=null && (Object)date1!=""){
+				PublicParameters.date1=PublicParameters.StringToDate(date1,"yyyy-MM-dd");
+				PublicParameters.date2=PublicParameters.StringToDate(date2,"yyyy-MM-dd");
+			}else{
+				PublicParameters.date1=null;
+				PublicParameters.date2=null;
+			}
+		 if(user!=null){
+			 List<Tixian> tixianJilu=tixianServiceImpl.select_tixian((start-1)*pageSize, pageSize, PublicParameters.id, PublicParameters.date1, PublicParameters.date2);
+			 map.put("tixianJilus", tixianJilu);
+			 map.put("user", user);
+			 return "accountWithdrawal";
+		 }else{
+			 request.setAttribute("jspName", "accountWithdrawal");
+			 return "secondPassword"; 
+		 }
+	 }
+}

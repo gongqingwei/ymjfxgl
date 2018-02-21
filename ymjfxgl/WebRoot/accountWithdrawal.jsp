@@ -1,7 +1,10 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -27,6 +30,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             }
             else {
                 alert(result);
+                window.location.reload();
             }
         }
         function getCountry(obj) {
@@ -67,12 +71,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="listing_box">
                     <ul class="search">
                         <li>
-<form action="/Finance/CashSubMit" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">                                <div class="group">
+<form action="CashSubMit" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">                                <div class="group">
                                     
-                                        <label class="label">电子币：0.0000</label> 
-                                        <label class="label">奖金币：97.2800</label> 
-                                        <label class="label">种子币：598.1600</label> 
-                                        <label class="label">购物积分：12.0000</label> 
+                                        <label class="label">电子币：${integral.dianzibi}</label> 
+                                        <label class="label">奖金币：${integral.jiangjinbi}</label> 
+                                        <label class="label">种子币：${integral.zhongzibi}</label> 
+                                        <label class="label">购物积分：${integral.shopjifen}</label> 
 
                                 </div>
                                 <div class="group" style="clear: both;"> 
@@ -90,9 +94,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                                 </div>
                                 <div class="group" style="clear: both;">
-                                    <label class="label">开户银行：农业银行</label>
-                                    <label class="label">银行帐号：6228482828737136871</label>
-                                    <label class="label">开户名：唐新平</label>
+                                    <label class="label">开户银行：${user.bankmessage}</label>
+                                    <label class="label">银行帐号：${user.banknumber}</label>
+                                    <label class="label">开户名：${user.kaihuname}</label>
 
 
                                 </div>
@@ -152,103 +156,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th nowrap>状态</th>
         <th width="8%" nowrap>操作</th>
     </tr>
-
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
+	  <c:forEach var="tixianJilu" items="${tixianJilus}">
+	  
+	  	 <tr>
+            <td align="center" nowrap>${tixianJilu.tixianzhanghu }</td>
+            <td align="center" nowrap>${tixianJilu.tixianjine}</td>
             <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2018/1/22 15:09:09</td>
-            <td align="center" nowrap>已确认</td>
+            <td align="center" nowrap>${tixianJilu.shijijine}</td>
+            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">${user.bankmessage }</td>
+            <td align="center" nowrap>${user.banknumber }</td>
+            <td align="center" nowrap>${user.kaihuname }</td>
+            <td align="center" nowrap style="line-height: 14px;"><fmt:formatDate value="${tixianJilu.time}" pattern="yyyy-MM-dd"/></td>
+            <td align="center" nowrap>${tixianJilu.status}</td>
             <td align="center" nowrap><span>--</span></td>
         </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2018/1/11 22:20:27</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2017/12/31 19:16:10</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2017/12/22 18:34:15</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2017/12/18 10:04:05</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2017/12/8 11:39:04</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2017/12/3 12:02:51</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
-        <tr>
-            <td align="center" nowrap>奖金币提现</td>
-            <td align="center" nowrap>100.00</td>
-            <td align="center" nowrap>6.00</td>
-            <td align="center" nowrap>94.00</td>
-            <td align="left" nowrap style="line-height: 14px; word-break: break-all; word-wrap: break-word;">农业银行</td>
-            <td align="center" nowrap>6228482828737136871</td>
-            <td align="center" nowrap>唐新平</td>
-            <td align="center" nowrap style="line-height: 14px;">2017/11/28 9:31:02</td>
-            <td align="center" nowrap>已确认</td>
-            <td align="center" nowrap><span>--</span></td>
-        </tr>
+	  </c:forEach>
+       
 </table>
 <div class="nextpage cBlack">
     <ul style="">

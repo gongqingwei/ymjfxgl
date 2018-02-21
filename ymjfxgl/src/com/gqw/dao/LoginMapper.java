@@ -22,7 +22,7 @@ public interface LoginMapper {
 	 * @param id
 	 * @return
 	 */
-	public List<User> loginById(@Param("id") int id);
+	public List<User> loginById(@Param("pid") int pid);
 	/**
 	 * 注册一个用户
 	 * @param user

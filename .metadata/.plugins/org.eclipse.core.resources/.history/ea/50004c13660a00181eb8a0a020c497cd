@@ -1,7 +1,0 @@
-package com.gqw.dao.order;
-
-import com.gqw.bean.Order;
-
-public interface MyOrder {
-	public Boolean insertOrder(Order order);
-}

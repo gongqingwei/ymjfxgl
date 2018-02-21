@@ -98,36 +98,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             
         </tr>
         </c:forEach>
-        <tr>
-            <td>zxa88888</td>
-            <td>张训安</td>
-          
-            <td>15700188157</td>
-            
-            <td>600.00</td>
-            <td>txp88888</td>
-            <td>txp88888<br />
-                  右区
-            </td>
-            <td style="line-height: 14px;">2017/11/29 13:06:35</td>
-            <td>正常</td>
-            
-        </tr>
-        <tr>
-            <td>zgg888</td>
-            <td>周刚刚</td>
-          
-            <td>18753876968</td>
-            
-            <td>600.00</td>
-            <td>txp88888</td>
-            <td>txp88888<br />
-                  左区
-            </td>
-            <td style="line-height: 14px;">2017/11/27 16:58:11</td>
-            <td>正常</td>
-            
-        </tr>
+        
 
 </table>
 <div class="nextpage cBlack">

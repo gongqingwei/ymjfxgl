@@ -2,6 +2,8 @@ package com.gqw.bean;
 
 import java.util.Date;
 
+import javax.persistence.Transient;
+
 public class User {
 	private String id;
 	private int pid;
@@ -137,6 +139,7 @@ public class User {
 	public void setBanknumber(String banknumber) {
 		this.banknumber = banknumber;
 	}
+	
 	public Date getOpentime() {
 		return opentime;
 	}

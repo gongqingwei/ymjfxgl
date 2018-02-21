@@ -34,21 +34,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				alert("密码不能为空");
 				return false;
 			};
-         var user_input_verifyCode=$("#user_input_verifyCode").val();  
-         $.ajax({  
-                type : 'post',  
-                url : "login",  
-                data:{verifyCode:user_input_verifyCode},  
-                /*dataType : "json",*/
-                success : function(data) {    
-                      
-                      document.getElementById("frmSet").submit();
-                },  
-                error : function() {  
-                    alert("查询失败");  
-                }  
-            });   
+         var user_input_verifyCode=$("#user_input_verifyCode").val();
+         var username=$("#username").val();
+         var password=$("#password").val();  
+         
+        document.getElementById("frmSet").submit();
      }
+     function AfterAdd(result) {
+          
+                alert(result);
+            
+        }
     </script>
 
   </head>
@@ -68,7 +64,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
 
-<form action="login"   id="frmSet" method="post">        
+<form action="login" data-ajax="true" data-ajax-method="Post" data-ajax-success="AfterAdd" id="frmSet" method="post">      
 <div class="login">
     <h2><img src="style/images/indexlogo.png">订单登录</h2>
             <ul>

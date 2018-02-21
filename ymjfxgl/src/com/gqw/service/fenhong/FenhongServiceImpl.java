@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.gqw.bean.Integral;
 import com.gqw.bean.JifendianzibiOrder;
 import com.gqw.bean.Order;
 import com.gqw.dao.jifendianzibi.JifendianzibiMapper;
@@ -34,6 +35,11 @@ public class FenhongServiceImpl implements FenhongService {
 	public int countsOrder(int loginid) {
 		// TODO Auto-generated method stub
 		return fenhongMapper.countsOrder(loginid);
+	}
+
+	public Integral selectMycount(String loginid) {
+		// TODO Auto-generated method stub
+		return fenhongMapper.selectMycount(loginid);
 	}
 
 }

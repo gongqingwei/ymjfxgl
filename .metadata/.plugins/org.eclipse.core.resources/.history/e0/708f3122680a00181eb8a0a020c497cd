@@ -1,5 +1,0 @@
-package com.gqw.service.order;
-
-public interface MyOrderService {
-
-}

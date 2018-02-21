@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将 1 个元素移至 “ymjfxgl/src/com.gqw.controller.tixian”&#x0D;&#x0A;－ 原始项目：“ymjfxgl”&#x0D;&#x0A;－ 目标元素：“ymjfxgl/src/com.gqw.controller.tixian”&#x0D;&#x0A;－ 原始元素：“com.gqw.controller.TixianController.java”&#x0D;&#x0A;－ 更新对已重构元素的引用" description="移动编译单元" destination="/src&lt;com.gqw.controller.tixian" element1="/src&lt;com.gqw.controller{TixianController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1518327065272" units="1" version="1.0"/>
+</session>

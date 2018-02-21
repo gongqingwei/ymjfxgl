@@ -35,9 +35,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.xml.sax.InputSource;
 
 import com.gqw.bean.Integral;
+import com.gqw.bean.Tixian;
 import com.gqw.bean.User;
 import com.gqw.dao.LoginMapper;
 import com.gqw.dao.jifendianzibi.JifendianzibiMapper;
+import com.gqw.service.fenhong.FenhongServiceImpl;
+import com.gqw.service.tixian.TixianServiceImpl;
 import com.gqw.util.PublicParameters;
 
 @Controller
@@ -48,7 +51,10 @@ public class LoginController {
 	@Autowired
 	private LoginMapper loginMapper;
 	@Autowired
-	private JifendianzibiMapper jifendianzibiMapper;
+	private FenhongServiceImpl fenhongServiceImpl;
+	@Autowired
+	private TixianServiceImpl tixianServiceImpl;
+	
 	/**
 	 * 用户登录
 	 * @param request
@@ -72,7 +78,15 @@ public class LoginController {
 			return "index";
 		}else if(!code.equals(user_input_verifyCode)){
 			System.out.println("code is error");
-			
+			JSONObject js=new JSONObject();
+			response.setContentType("application/x-json;charset=utf-8");
+			js.accumulate("data","code is error");
+			try {
+				response.getWriter().print(js.toString());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			return "index";
 		}else if(user.getIdentity()==0){
 			System.out.println("no activity");
@@ -217,7 +231,7 @@ public class LoginController {
 		return "activeOrder";
 	}
 	/**
-	 * 查询已激活订单
+	 * 查询未激活订单
 	 * @return
 	 */
 	@RequestMapping("unactivatedOrder")
@@ -230,7 +244,7 @@ public class LoginController {
 			}
 		}
 		map.put("users", unactiveUsers);
-		return "activeOrder";
+		return "unactivatedOrder";
 	}
 	/**
 	 * 生成验证码
@@ -300,16 +314,7 @@ public class LoginController {
 			 return "secondPassword"; 
 		 }
 	 }
-	 @RequestMapping("accountWithdrawal")
-	 public String yanzhengaccountWithdrawal(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
-		 if(user!=null){
-			 return "accountWithdrawal";
-		 }else{
-			 request.setAttribute("jspName", "accountWithdrawal");
-			 return "secondPassword"; 
-		 }
-	 }
+	 
 	 @RequestMapping("accountTransfer")
 	 public String yanzhengaccountTransfer(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
 		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
@@ -324,7 +329,7 @@ public class LoginController {
 	 public String yanzhengmyAccounts(Map<String,Object> map, HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
 		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
 		 if(user!=null){
-			 Integral account=jifendianzibiMapper.selectMycount(String.valueOf(PublicParameters.id));
+			 Integral account=fenhongServiceImpl.selectMycount(String.valueOf(PublicParameters.id));
 			 map.put("account", account);
 			 map.put("user", user);
 			 return "myAccounts";

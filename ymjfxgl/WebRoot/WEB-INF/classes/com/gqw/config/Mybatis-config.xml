@@ -12,5 +12,6 @@
 	<mapper resource="com/gqw/dao/order/MyOrderMapper.xml"/>
 	<mapper resource="com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
 	<mapper resource="com/gqw/dao/email/EmailMapper.xml"/>
+	<mapper resource="com/gqw/dao/tixian/TixianMapper.xml"/>
 </mappers>
 </configuration>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<!-- namespace的值一定是接口的全路径与接口绑定后,此文件相当于接口的实现类  -->
+<mapper namespace="com.gqw.dao.tixian.TixianMapper">
+<insert id="tixian" parameterType="Tixian">
+	insert into zhanghutixian(tixianzhanghu ,tixianjine ,shijijine ,status ,loginid )
+	values(#{tixianzhanghu},#{tixianjine},#{tixianjine},#{status},#{loginid})
+</insert>
+<select id="select_tixian" parameterType="int" resultType="Tixian">
+	select * from zhanghutixian where loginid=#{loginid}
+	
+		<if test="date1!=null and date2!=null and date1!='' and date2!=''">
+			and time between #{date1} and #{date2}
+		</if>
+		limit #{start},#{pageSize}
+</select>
+<select id="select_jiangjinbi" parameterType="int" resultType="float">
+	select jiangjinbi from integral where loginid=#{loginid}
+</select>
+</mapper>

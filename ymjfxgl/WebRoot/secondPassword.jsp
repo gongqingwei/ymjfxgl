@@ -10,6 +10,7 @@
 	}else{
 		jspName=(String)request.getAttribute("jspName");
 	}
+	System.out.print("jspName:"+jspName);
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">

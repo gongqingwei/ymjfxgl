@@ -14,12 +14,12 @@
 	</if>
 </select>
 <insert id="insertOrder" parameterType="com.gqw.bean.User" >
-	insert into login(username,password,identity,seondpassword,thirdpassword,rengounumber,tuijianrennumber,
+	insert into login(opentime ,username,password,identity,seondpassword,thirdpassword,rengounumber,tuijianrennumber,
 	baodancenternumber,truename,phonenumber,shenfenzhengnumber,adress,bankmessage,bankzhihang,bankfenlichu,
-	kaihuname,banknumber,pid,opentime )
-	values(#{username},#{password},#{identity},#{seondpassword},#{thirdpassword},#{rengounumber},
+	kaihuname,banknumber,pid)
+	values(#{opentime },#{username},#{password},#{identity},#{seondpassword},#{thirdpassword},#{rengounumber},
 	#{tuijianrennumber},#{baodancenternumber},#{truename},#{phonenumber},#{shenfenzhengnumber},#{adress},
-	#{bankmessage},#{bankzhihang},#{bankfenlichu},#{kaihuname},#{banknumber},#{pid},#{opentime });
+	#{bankmessage},#{bankzhihang},#{bankfenlichu},#{kaihuname},#{banknumber},#{pid})
 </insert>
 <select id="personalMessage" parameterType="int" resultType="User">
 	select * from login where id=#{id}
