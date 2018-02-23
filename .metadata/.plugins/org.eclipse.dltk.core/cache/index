@@ -116,11 +116,9 @@
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/accountConversion.jsp" timestamp="1517650903989" lastAccessTime="1517888336332"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/accountTransfer.jsp" timestamp="1517650903989" lastAccessTime="1517888336520"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/accountsCharge.jsp" timestamp="1517650903989" lastAccessTime="1517888336972"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/bonusDetails.jsp" timestamp="1517650904020" lastAccessTime="1517888337456"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/changePassword.jsp" timestamp="1517650904020" lastAccessTime="1517888337612"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/checkBonusDetails.jsp" timestamp="1517831221273" lastAccessTime="1517888337752"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/commodityList.jsp" timestamp="1517888023380" lastAccessTime="1517888337939"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/financeStatistics.jsp" timestamp="1517650904036" lastAccessTime="1517888338220"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/WdatePicker.js" timestamp="1517646941711" lastAccessTime="1517888340234"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/ZeroClipboard.min.js" timestamp="1517646941711" lastAccessTime="1517888340375"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/style/js/all.js" timestamp="1517646941680" lastAccessTime="1517888340515"/>
@@ -144,11 +142,13 @@
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/myOrder.jsp" timestamp="1518160386994" lastAccessTime="1518160387605"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/myHomePage.jsp" timestamp="1518171614648" lastAccessTime="1518171615277"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/applicationReportingCenter.jsp" timestamp="1518173906795" lastAccessTime="1518173907362"/>
-  <entries path="E:/www/testgit/ymjfxgl/WebRoot/main.jsp" timestamp="1518176158259" lastAccessTime="1518176158837"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/activeOrder.jsp" timestamp="1518186794920" lastAccessTime="1518186795560"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/unactivatedOrder.jsp" timestamp="1518187020610" lastAccessTime="1518187021202"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/reinvestmentAndBonusList.jsp" timestamp="1518338140194" lastAccessTime="1518338140771"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/index.jsp" timestamp="1518339113952" lastAccessTime="1518339114529"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/secondPassword.jsp" timestamp="1518341603851" lastAccessTime="1518341604444"/>
   <entries path="E:/www/testgit/ymjfxgl/WebRoot/accountWithdrawal.jsp" timestamp="1519224191858" lastAccessTime="1519224192493"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/main.jsp" timestamp="1519361579813" lastAccessTime="1519361580503"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/bonusDetails.jsp" timestamp="1519366516770" lastAccessTime="1519366517407"/>
+  <entries path="E:/www/testgit/ymjfxgl/WebRoot/financeStatistics.jsp" timestamp="1519374937691" lastAccessTime="1519374938331"/>
 </cache:CacheIndex>

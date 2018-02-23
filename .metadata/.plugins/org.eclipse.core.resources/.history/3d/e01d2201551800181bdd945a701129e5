@@ -1,0 +1,19 @@
+package com.gqw.service.jiangjinmingxi;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.gqw.bean.Jiangjinmingxi;
+import com.gqw.dao.jiangjinmingxi.JiangjinmingxiMapper;
+
+public class JiangjinmingxiServiceImpl implements JiangjinmingxiService {
+
+	@Autowired
+	private JiangjinmingxiMapper jMapper;
+	public List<Jiangjinmingxi> select_jiangjinmingxi(String loginid) {
+		// TODO Auto-generated method stub
+		return jMapper.select_jiangjinmingxi(loginid);
+	}
+
+}

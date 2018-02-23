@@ -3,5 +3,8 @@
 <typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.fenhong{FenhongService.java[FenhongService" modifiers="513" timestamp="1518328068529"/>
 <typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.email{EmailService.java[EmailService" modifiers="513" timestamp="1518009867687"/>
 <typeInfo handle="=ymjfxgl/C:\/Program Files\/Genuitec\/Common\/plugins\/com.genuitec.eclipse.j2eedt.core_8.6.0.me201007292038\/data\/libraryset\/EE_5\/javaee.jar&lt;javax.xml.registry.infomodel(EmailAddress.class[EmailAddress" modifiers="1537" timestamp="1280411378000"/>
-<typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.tixian{TixianService.java[TixianService" modifiers="513" timestamp="1519207222756"/>
+<typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.tixian{TixianService.java[TixianService" modifiers="513" timestamp="1519221010872"/>
+<typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.jiangjinmingxi{JiangjinmingxiService.java[JiangjinmingxiService" modifiers="513" timestamp="1519363225067"/>
+<typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.caitutongji{CaiwutongjiService.java[CaiwutongjiService" modifiers="513" timestamp="1519373109941"/>
+<typeInfo handle="=ymjfxgl/src&lt;com.gqw.service.zhuanzhang{ZhuanzhangService.java[ZhuanzhangService" modifiers="513" timestamp="1519397272321"/>
 </typeInfoHistroy>

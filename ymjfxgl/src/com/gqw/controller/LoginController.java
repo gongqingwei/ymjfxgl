@@ -304,27 +304,9 @@ public class LoginController {
 	        return s.charAt(r.nextInt(s.length()));  
 	    } 
 	
-	 @RequestMapping("financeStatistics")
-	 public String yanzhengfinanceStatistics(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
-		 if(user!=null){
-			 return "financeStatistics";
-		 }else{
-			 request.setAttribute("jspName", "financeStatistics");
-			 return "secondPassword"; 
-		 }
-	 }
 	 
-	 @RequestMapping("accountTransfer")
-	 public String yanzhengaccountTransfer(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
-		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
-		 if(user!=null){
-			 return "accountTransfer";
-		 }else{
-			 request.setAttribute("jspName", "accountTransfer");
-			 return "secondPassword"; 
-		 }
-	 }
+	 
+	 
 	 @RequestMapping("myAccounts")
 	 public String yanzhengmyAccounts(Map<String,Object> map, HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
 		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);

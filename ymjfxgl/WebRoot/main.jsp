@@ -128,7 +128,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </li>
             <li class=""><a href="javascript:;"><i class="icon-tags"></i><span class="title">财务管理 <span class="label-en">Finance</span></span> <span class="arrow"></span></a>
                <ul class="sub-menu">
-                  <li><a href="bonusDetails.jsp" target="iframemain">奖金明细 <span class="label-en"></span></a></li>
+                  <li><a href="bonusDetails?start=1&pageSize=9" target="iframemain">奖金明细 <span class="label-en"></span></a></li>
                   <li><a href="secondPassword.jsp?jspName=financeStatistics" target="iframemain">财务统计 <span class="label-en"></span></a></li>
                   <li><a href="secondPassword.jsp?jspName=accountWithdrawal" target="iframemain">账户提现 <span class="label-en"></span></a></li>
                   <li><a href="secondPassword.jsp?jspName=accountTransfer" target="iframemain">账户转账 <span class="label-en"></span></a></li>

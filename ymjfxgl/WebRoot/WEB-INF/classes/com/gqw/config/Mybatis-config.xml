@@ -13,5 +13,8 @@
 	<mapper resource="com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
 	<mapper resource="com/gqw/dao/email/EmailMapper.xml"/>
 	<mapper resource="com/gqw/dao/tixian/TixianMapper.xml"/>
+	<mapper resource="com/gqw/dao/jiangjinmingxi/JiangjinmingxiMapper.xml"/>
+	<mapper resource="com/gqw/dao/caiwutongji/CaiwutongjiMapper.xml"/>
+	<mapper resource="com/gqw/dao/zhanghuzhuanzhang/ZhuanzhangMapper.xml"/>
 </mappers>
 </configuration>

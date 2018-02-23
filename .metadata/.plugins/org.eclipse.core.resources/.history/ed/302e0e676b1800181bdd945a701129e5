@@ -1,0 +1,24 @@
+package com.gqw.controller.caiwutongji;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.User;
+import com.gqw.util.PublicParameters;
+
+@Controller
+public class CaiwutongjiController {
+
+	@RequestMapping("financeStatistics")
+	 public String yanzhengfinanceStatistics(HttpServletRequest request,String username,String password,String pwd,String thirdpwd){
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
+		 if(user!=null){
+			 return "financeStatistics";
+		 }else{
+			 request.setAttribute("jspName", "financeStatistics");
+			 return "secondPassword"; 
+		 }
+	 }
+}

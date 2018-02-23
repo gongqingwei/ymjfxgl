@@ -1,0 +1,39 @@
+package com.gqw.controller.zhuanzhang;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.User;
+import com.gqw.bean.Zhanghuzhuanzhang;
+import com.gqw.dao.LoginMapper;
+import com.gqw.service.zhuanzhang.ZhuanzhangServiceImpl;
+import com.gqw.util.PublicParameters;
+
+@Controller
+public class ZhuanzhangController {
+	@Autowired
+	private LoginMapper loginMapper;
+	@Autowired
+	private ZhuanzhangServiceImpl zhuanzhangServiceImpl;
+	@RequestMapping("accountTransfer")
+	 public String yanzhengaccountTransfer(HttpServletRequest request,String username,String password,
+			 String pwd,String thirdpwd,String allaccount,String type,String zhuanruzhanghao,String zhanghu,
+			 int start,int pageSize,String date1,String date2){
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
+		 if(user!=null){
+			 List<Zhanghuzhuanzhang> zhanghuzhuanzhangs=new ArrayList<Zhanghuzhuanzhang>();
+			 zhanghuzhuanzhangs=zhuanzhangServiceImpl.select_zhuanzhangjilu(PublicParameters.id, allaccount, 
+					 type, zhuanruzhanghao, zhanghu, start, pageSize, date1, date2);
+			 return "accountTransfer";
+		 }else{
+			 request.setAttribute("jspName", "accountTransfer");
+			 return "secondPassword"; 
+		 }
+	 }
+}

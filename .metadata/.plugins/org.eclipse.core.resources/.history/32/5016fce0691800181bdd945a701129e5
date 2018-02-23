@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<typeAliases>
+	<package name="com/gqw/bean"/>
+</typeAliases>
+<mappers>
+	<mapper resource="com/gqw/dao/LoginMapper.xml"/>
+	<mapper resource="com/gqw/dao/commodity/CommodityMapper.xml"/>
+	<mapper resource="com/gqw/dao/order/MyOrderMapper.xml"/>
+	<mapper resource="com/gqw/dao/jifendianzibi/JifendianzibiMapper.xml"/>
+	<mapper resource="com/gqw/dao/email/EmailMapper.xml"/>
+	<mapper resource="com/gqw/dao/tixian/TixianMapper.xml"/>
+	<mapper resource="com/gqw/dao/jiangjinmingxi/JiangjinmingxiMapper.xml"/>
+</mappers>
+</configuration>

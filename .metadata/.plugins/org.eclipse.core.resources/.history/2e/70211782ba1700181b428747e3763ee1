@@ -1,0 +1,9 @@
+package com.gqw.dao.jiangjinmingxi;
+
+public class 片段 {
+	insert into jiangjinmingxi
+	
+	(time,fenhong,zhituijiang,jiandianjiang,fuwujintie,guanlijiang,quanguodongshi,guanlifei,xiaoji,loginid,mingxi)
+	values("2018-02-03",12.39,0.00,0.00,0.00,0.00,0.00,0.74,11.65,2,"明细");
+}
+

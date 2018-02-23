@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -106,6 +108,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <th width="6%" nowrap="nowrap">时间</th>
         <th nowrap="nowrap">说明</th>
     </tr>
+    <c:forEach var="caiwutongji" items="${caiwutongjis}">
+    	<tr>
+    		<td>${user.username}</td>
+    		<td>${caiwutongji.type}</td>
+    		<td>${caiwutongji.zengjiajine}</td>
+    		<td>${caiwutongji.kouchujine}</td>
+    		<td>${account.dianzibi}</td>
+    		<td>${account.jiangjinbi}</td>
+    		<td>${account.zhongzibi}</td>
+    		<td>${account.shopjifen}</td>
+    		<td><fmt:formatDate value="${caiwutongji.time}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+    		<td>${caiwutongji.shuoming}</td>
+    	</tr>
+    </c:forEach>
         <tr>
             <td align="center" nowrap="nowrap">txp88888</td>
             <td align="center" nowrap="nowrap">分红奖 </td>

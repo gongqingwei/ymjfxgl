@@ -1,0 +1,61 @@
+package com.gqw.controller.zhuanzhang;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.gqw.bean.User;
+import com.gqw.bean.Zhanghuzhuanzhang;
+import com.gqw.dao.LoginMapper;
+import com.gqw.service.zhuanzhang.ZhuanzhangServiceImpl;
+import com.gqw.util.PublicParameters;
+
+@Controller
+public class ZhuanzhangController {
+	@Autowired
+	private LoginMapper loginMapper;
+	@Autowired
+	private ZhuanzhangServiceImpl zhuanzhangServiceImpl;
+	@RequestMapping("accountTransfer")
+	 public String yanzhengaccountTransfer(HashMap<String, Object> map,HttpServletRequest request,String username,String password,
+			 String pwd,String thirdpwd,String allaccount,String type,String zhuanruzhanghao,String zhanghu,
+			 int start,int pageSize,String date1,String date2){
+		String type1=null;
+		String type2=null;
+		if(date1!=null && (Object)date1!=""){
+			PublicParameters.date1=PublicParameters.StringToDate(date1,"yyyy-MM-dd");
+			PublicParameters.date2=PublicParameters.StringToDate(date2,"yyyy-MM-dd");
+		}else{
+			PublicParameters.date1=null;
+			PublicParameters.date2=null;
+		}
+		 User user=loginMapper.login(PublicParameters.username, PublicParameters.password, pwd, thirdpwd);
+		 if(user!=null){
+			 if(type.equals("转入")){
+				 type=user.getUsername();
+			 }else if(type.equals("转出")){
+				 ty
+			 }else{
+				 System.out.println("type:"+type);
+			 }
+			 List<Zhanghuzhuanzhang> zhanghuzhuanzhangs=new ArrayList<Zhanghuzhuanzhang>();
+			 zhanghuzhuanzhangs=zhuanzhangServiceImpl.select_zhuanzhangjilu(PublicParameters.id, allaccount, 
+					 type1,type2, zhuanruzhanghao, zhanghu, start, pageSize, PublicParameters.date1, 
+					 PublicParameters.date2);
+			 if(zhanghuzhuanzhangs!=null){
+				 map.put("zhanghuzhuanzhangs", zhanghuzhuanzhangs);
+				 map.put("user", user);
+			 }
+			 return "accountTransfer";
+		 }else{
+			 request.setAttribute("jspName", "accountTransfer");
+			 return "secondPassword"; 
+		 }
+	 }
+}

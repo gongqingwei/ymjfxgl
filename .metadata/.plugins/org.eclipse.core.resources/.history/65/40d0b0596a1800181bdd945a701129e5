@@ -1,0 +1,5 @@
+package com.gqw.service.caitutongji;
+
+public interface CaiwutongjiService {
+
+}

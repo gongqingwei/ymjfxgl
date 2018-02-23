@@ -1,0 +1,5 @@
+package com.gqw.service.zhuanzhang;
+
+public interface ZhuanzhangService {
+
+}

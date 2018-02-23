@@ -1,0 +1,14 @@
+package com.gqw.service.jiangjinmingxi;
+
+import java.util.List;
+
+import com.gqw.bean.Jiangjinmingxi;
+
+public class JiangjinmingxiServiceImpl implements JiangjinmingxiService {
+
+	public List<Jiangjinmingxi> select_jiangjinmingxi(String loginid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

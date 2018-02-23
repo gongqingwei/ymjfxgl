@@ -1,0 +1,16 @@
+package com.gqw.dao.zhanghuzhuanzhang;
+
+import java.util.Date;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.gqw.bean.Zhanghuzhuanzhang;
+
+public interface ZhuanzhangMapper {
+	public List<Zhanghuzhuanzhang> select_zhuanzhangjilu(@Param("loginid")int loginid,
+			@Param("type")String type,
+			@Param("zhuanruzhanghao")String zhuanruzhanghao,
+			@Param("zhanghu")String zhanghu,@Param("start")int start,@Param("pageSize")int pageSize,
+			@Param("date1")Date date1,@Param("date2")Date date2);
+}

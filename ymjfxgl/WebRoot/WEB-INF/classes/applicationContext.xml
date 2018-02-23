@@ -42,4 +42,16 @@
 	<property name="mapperInterface" value="com/gqw/dao/tixian/TixianMapper"></property>
 	<property name="sqlSessionFactory" ref="sqlSession"></property>
 </bean>
+<bean name="jiangjinmingxi" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/jiangjinmingxi/JiangjinmingxiMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
+<bean name="caiwutongji" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/caiwutongji/CaiwutongjiMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
+<bean name="zhanghuzhuanzhang" class="org.mybatis.spring.mapper.MapperFactoryBean">
+	<property name="mapperInterface" value="com/gqw/dao/zhanghuzhuanzhang/ZhuanzhangMapper"></property>
+	<property name="sqlSessionFactory" ref="sqlSession"></property>
+</bean>
 </beans>

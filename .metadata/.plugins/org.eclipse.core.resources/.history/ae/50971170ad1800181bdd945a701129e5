@@ -1,0 +1,29 @@
+package com.gqw.service.zhuanzhang;
+
+import java.util.Date;
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
+import com.gqw.bean.Zhanghuzhuanzhang;
+
+public interface ZhuanzhangService {
+	/**
+	 * 分页查询所有的转账记录
+	 * @param loginid
+	 * @param type
+	 * @param zhuanruzhanghao
+	 * @param zhanghu
+	 * @param start
+	 * @param pageSize
+	 * @param date1
+	 * @param date2
+	 * @return
+	 */
+	public List<Zhanghuzhuanzhang> select_zhuanzhangjilu(@Param("loginid")int loginid,
+			@Param("allaccount")String allaccount,@Param("type")String type,
+			@Param("zhuanruzhanghao")String zhuanruzhanghao,
+			@Param("zhanghu")String zhanghu,@Param("start")int start,@Param("pageSize")int pageSize,
+			@Param("date1")Date date1,@Param("date2")Date date2);
+}
+

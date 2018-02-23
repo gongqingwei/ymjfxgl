@@ -1,0 +1,5 @@
+package com.gqw.dao.jiangjinmingxi;
+
+public interface JiangjinmingxiMapper {
+
+}

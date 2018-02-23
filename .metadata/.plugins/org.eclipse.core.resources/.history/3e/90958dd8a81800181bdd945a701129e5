@@ -1,0 +1,17 @@
+package com.gqw.service.zhuanzhang;
+
+import java.util.Date;
+import java.util.List;
+
+import com.gqw.bean.Zhanghuzhuanzhang;
+
+public class ZhuanzhangServiceImpl implements ZhuanzhangService {
+
+	public List<Zhanghuzhuanzhang> select_zhuanzhangjilu(int loginid,
+			String allaccount, String type, String zhuanruzhanghao,
+			String zhanghu, int start, int pageSize, Date date1, Date date2) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
